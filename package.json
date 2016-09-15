@@ -1,0 +1,36 @@
+{
+  "name": "eslint-config-foobarhq",
+  "version": "1.0.0",
+  "description": "ESLint configuration for the FooBarHQ JavaScript code style",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/foobarhq/eslint-config-foobarhq.git"
+  },
+  "keywords": [
+    "eslint",
+    "foobarhq"
+  ],
+  "author": "Guylian Cox <gc@foobarhq.com>",
+  "license": "MIT",
+  "homepage": "https://bitbucket.org/foobarhq/eslint-config-foobarhq#readme",
+  "peerDependencies": {
+    "eslint": "^3.5.0",
+    "babel-eslint": "^6.1.2",
+    "eslint-plugin-babel": "^3.3.0",
+    "eslint-plugin-flowtype": "^2.18.1",
+    "eslint-plugin-import": "^1.15.0",
+    "eslint-config-airbnb": "^11.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.5.0",
+    "babel-eslint": "^6.1.2",
+    "eslint-plugin-babel": "^3.3.0",
+    "eslint-plugin-flowtype": "^2.18.1",
+    "eslint-plugin-import": "^1.15.0",
+    "eslint-config-airbnb": "^11.1.0"
+  }
+}
