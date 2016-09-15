@@ -48,7 +48,7 @@ class A {
 
 ### Max line length
 
-> AirBnB: https://github.com/airbnb/javascript#strings--line-length
+> AirBnB: https://github.com/airbnb/javascript#strings--line-length  
 > ESLint: `'max-len': ['error', {
     code: 120,
     ignoreUrls: true,
@@ -78,7 +78,9 @@ If it makes reading the code easier, classes and methods may have **one** option
 
 ## void 0 vs undefined
 
-> ESLint: `'no-void': 0, 'no-undefined': 2,`
+> ESLint:  
+> `'no-void': 0`  
+> `'no-undefined': 2,`
 
 Use `void 0` rather than `undefined`. You should also use the babel plugin that converts `undefined` to `void 0`.
 
@@ -99,7 +101,7 @@ switch (GetType(aVar)) {
     type = 'object';
     break;
     
-  case TYPE_STRING':
+  case TYPE_STRING:
     type = 'string';
     break;
 }
@@ -116,7 +118,7 @@ switch (GetType(aVar)) {
     type = 'object';
     break;
     
-  case TYPE_STRING':
+  case TYPE_STRING:
     type = 'string';
     break;
 }

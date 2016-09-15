@@ -28,7 +28,7 @@ This style guide extends the [AirBnB style guide](https://github.com/airbnb/java
 ### Semicolons / comma
 
 > `'flowtype/semi': [2, 'always']`  
-> `'flowtype/delimiter-dangle': [2, 'always-multiline']`
+> `'flowtype/delimiter-dangle': [2, 'always-multiline']`  
 > `'babel/flow-object-type': [2, 'comma']`
 
 - Always add a colon after a type declaration.
