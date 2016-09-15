@@ -1,5 +1,7 @@
 # eslint-config-foobarhq
 
-## Differences with the AirBnB code style
+ESLint configuration for the foobarhq javascript style guide.
+
+## Style guide
 
 see `rules/`
