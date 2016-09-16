@@ -2,6 +2,12 @@
 
 This style guide extends the [AirBnB style guide](https://github.com/airbnb/javascript).
 
+### Spacing
+
+Use 2 spaces for indentation.
+
+Never use more than one empty line for line spacing.
+
 ### Trailing commas
 
 > AirBnB: https://github.com/airbnb/javascript#commas--dangling  
@@ -9,7 +15,7 @@ This style guide extends the [AirBnB style guide](https://github.com/airbnb/java
 > ESlint: `babel/func-params-comma-dangle: ['error', 'always-multiline']`
 
 Multiline function parameters and calls must have a trailing comma.  
-Multiline Flow type declarations should also have a trailing comma or semicolon. 
+Multiline Flow type declarations should also have a trailing comma or semicolon.
 
 ### Generator Stars
 
@@ -88,19 +94,19 @@ Use `void 0` rather than `undefined`. You should also use the babel plugin that 
 
 > ESLint: `'no-fallthrough': [2, { commentPattern: 'fallthrough' }]`
 
-You shouldn't let a case fall-through another one unless explicitly declaring that you are doing so 
-by preceding the next `case` statement with `// fallthrough` 
+You shouldn't let a case fall-through another one unless explicitly declaring that you are doing so
+by preceding the next `case` statement with `// fallthrough`
 
 ```javascript
 // Invalid
 switch (GetType(aVar)) {
   case TYPE_NULL:
     type = 'null'
-    
+
   case TYPE_OBJ:
     type = 'object';
     break;
-    
+
   case TYPE_STRING:
     type = 'string';
     break;
@@ -112,12 +118,12 @@ switch (GetType(aVar)) {
 switch (GetType(aVar)) {
   case TYPE_NULL:
     type = 'null'
-    
+
   // fallthrough
   case TYPE_OBJ:
     type = 'object';
     break;
-    
+
   case TYPE_STRING:
     type = 'string';
     break;
