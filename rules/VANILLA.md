@@ -97,6 +97,72 @@ Use `void 0` rather than `undefined`. You should also use the babel plugin that 
 
 Use is allowed inside the afterthought of `for` loops. Otherwise, use operators `+=` and `-=`.
 
+## Type conversion
+
+> ESLint: `'no-implicit-coercion': 'error'``
+
+What's clever isn't, use explicit conversion.  
+Let minifiers take care of shortening it to the less human-readable coercion mechanisms.
+
+Note: Type coercion is still allowed, just not when doing type conversion. (ie: still allowed when concatenating strings).
+
+```javascript
+// Good:
+const enabled = Boolean(config.enabled);
+const helloStr = String(hello);
+const hugeNumber = Number('9007199254740991');
+const pxCount = Number('45px'); // NaN
+
+// Bad:
+const enabled = !!config.enabled;
+const helloStr = '' + hello;
+const hugeNumber = +'9007199254740991';
+const pxCount = +'45px'; // NaN
+
+// Super bad:
+const hugeNumber = '9007199254740991' >> 0; // returns -1
+const pxCount = '45px' >> 0; // 0
+
+// Still good:
+const result = 10;
+const calculus = `5 + 5 = ${result}`;
+const pxCount = Number.parseInt('45px', 10); // 45
+```
+
+## Function.bind, Function.call
+
+> ESLint:
+> `'no-extra-bind': ['error']`  
+> `'no-invalid-this': ['error']`
+
+Don't bind or use Function.prototype.call, either use arrow functions or pass `this` as an argument.
+
+Don't use `this` outside of classes, class-like objects, and mixins.
+
+Static analysis does not work well with dynamic execution contexts, they are also
+often confusing which is why tc39 is making moves to make them more intuitive.
+
+## Mixins
+
+Declare them as objects to differentiate them from classes.
+
+```javascript
+// Bad:
+class SomeMixin {
+  // methods.
+}
+
+// Badder, don't leave them as standalones.
+function someMixableMethod() {
+
+}
+
+// Good:
+const SomeMixin = {
+  // methods.
+};
+```
+
 ## Switch-cases
 
 > ESLint: `'no-fallthrough': [2, { commentPattern: 'fallthrough' }]`
