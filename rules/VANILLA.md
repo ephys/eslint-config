@@ -90,6 +90,13 @@ If it makes reading the code easier, classes and methods may have **one** option
 
 Use `void 0` rather than `undefined`. You should also use the babel plugin that converts `undefined` to `void 0`.
 
+## Unary increment and decrement operators
+
+> AirBnB: https://github.com/airbnb/javascript#variables--unary-increment-decrement  
+> ESLint: `'no-plusplus': ['error', { allowForLoopAfterthoughts: true }]`
+
+Use is allowed inside the afterthought of `for` loops. Otherwise, use operators `+=` and `-=`.
+
 ## Switch-cases
 
 > ESLint: `'no-fallthrough': [2, { commentPattern: 'fallthrough' }]`
