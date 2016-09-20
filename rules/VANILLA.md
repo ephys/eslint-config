@@ -93,9 +93,9 @@ Use `void 0` rather than `undefined`. You should also use the babel plugin that 
 ## Unary increment and decrement operators
 
 > AirBnB: https://github.com/airbnb/javascript#variables--unary-increment-decrement  
-> ESLint: `'no-plusplus': ['error', { allowForLoopAfterthoughts: true }]`
+> ESLint: `'no-plusplus': 'off'`
 
-Use is allowed inside the afterthought of `for` loops. Otherwise, use operators `+=` and `-=`.
+Use is allowed.
 
 ## Type conversion
 
