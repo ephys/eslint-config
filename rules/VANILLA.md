@@ -202,3 +202,9 @@ switch (GetType(aVar)) {
     break;
 }
 ```
+
+## Curly brackets
+
+> ESLint: `'curly': 'error'`
+
+Always surround blocks with curly brackets.
