@@ -1,22 +1,23 @@
 {
-  "name": "eslint-config-foobarhq",
-  "version": "1.0.0",
-  "description": "ESLint configuration for the FooBarHQ JavaScript code style",
+  "name": "@foobarhq/eslint-config",
+  "version": "1.0.1",
+  "description": "ESLint configuration for the foobarHQ JavaScript code style",
   "main": "lib/index.js",
+  "private": false,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/foobarhq/eslint-config-foobarhq.git"
+    "url": "git+ssh://git@github.com/foobarhq/eslint-config-foobarhq.git"
   },
   "keywords": [
     "eslint",
     "foobarhq"
   ],
-  "author": "Guylian Cox <gc@foobarhq.com>",
+  "author": "Guylian Cox <gc@madkings.com>",
   "license": "MIT",
-  "homepage": "https://bitbucket.org/foobarhq/eslint-config-foobarhq#readme",
+  "homepage": "https://github.com/foobarhq/eslint-config-foobarhq",
   "dependencies": {
     "babel-eslint": "^7.1.1",
     "eslint": "^3.11.0",

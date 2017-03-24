@@ -1,15 +1,23 @@
-# eslint-config-foobarhq
+# @foobarhq/eslint-config
 
 ESLint configuration for the foobarhq javascript style guide.
 
-## Style guide
+see [rules/](https://github.com/foobarhq/eslint-config-foobarhq/tree/master/rules) for details on the code style.
 
-see `rules/`
+## Usage
 
-## Plugin Candidates
+- Install using `npm i -D @foobarhq/eslint-config`
+- Create a `.eslintrc` file containing the following:
+    ```json
+    {
+      "extends": "@foobarhq/eslint-config"
+    }
+    ```
 
-https://github.com/amilajack/eslint-plugin-flowtype-errors
-https://github.com/apollographql/eslint-plugin-graphql
-https://github.com/Rantanen/eslint-plugin-xss
-https://github.com/nodesecurity/eslint-plugin-security
-https://github.com/selaux/eslint-plugin-filenames
+## Future Plugin Candidates
+
+- https://github.com/amilajack/eslint-plugin-flowtype-errors
+- https://github.com/apollographql/eslint-plugin-graphql
+- https://github.com/Rantanen/eslint-plugin-xss
+- https://github.com/nodesecurity/eslint-plugin-security
+- https://github.com/selaux/eslint-plugin-filenames
