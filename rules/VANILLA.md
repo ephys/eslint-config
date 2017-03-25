@@ -1,21 +1,28 @@
-## FooBarHQ Vanilla EcmaScript style guide.
+# foobarhq Vanilla EcmaScript style guide.
 
 This style guide extends the [AirBnB style guide](https://github.com/airbnb/javascript).
 
-### Spacing
+## Max line length
+
+> AirBnB: https://github.com/airbnb/javascript#strings--line-length  
+> ESLint: `'max-len': ['error', {
+    code: 120,
+    ignoreUrls: true,
+    ignoreStrings: true,
+    ignoreTemplateLiterals: true
+}]`
+
+120 characters. Because we, at pictawall, have enormous screens.
+
+However, strings and URLs that cause the line to go over the limit are allowed to overflow the screen.
+
+## Spacing
+
+> AirBnB: https://github.com/airbnb/javascript#whitespace--padded-blocks
 
 Use 2 spaces for indentation.
 
 Never use more than one empty line for line spacing.
-
-### Trailing commas
-
-> AirBnB: https://github.com/airbnb/javascript#commas--dangling  
-> Babel: `babel-preset-syntax-trailing-function-commas`  
-> ESlint: `babel/func-params-comma-dangle: ['error', 'always-multiline']`
-
-Multiline function parameters and calls must have a trailing comma.  
-Multiline Flow type declarations should also have a trailing comma or semicolon.
 
 ### Generator Stars
 
@@ -52,21 +59,16 @@ class A {
 }
 ```
 
-### Max line length
+## Trailing commas
 
-> AirBnB: https://github.com/airbnb/javascript#strings--line-length  
-> ESLint: `'max-len': ['error', {
-    code: 120,
-    ignoreUrls: true,
-    ignoreStrings: true,
-    ignoreTemplateLiterals: true
-}]`
+> AirBnB: https://github.com/airbnb/javascript#commas--dangling  
+> Babel: `babel-preset-syntax-trailing-function-commas`  
+> ESlint: `babel/func-params-comma-dangle: ['error', 'always-multiline']`
 
-120 characters. Because we, at pictawall, have enormous screens.
+Multiline function parameters and calls must have a trailing comma.  
+Multiline Flow type declarations should also have a trailing comma or semicolon.
 
-However, strings and URLs that cause the line to go over the limit are allowed to overflow the screen.
-
-### Console calls
+## Console calls
 
 > ESLint: `'no-console': [2, { allow: ['warn', 'error', 'info'] }]`
 
@@ -75,12 +77,6 @@ Only `console.error`, `console.warn` and `console.info` are tolerated and won't 
 You are, however, invited to use the other methods when developing. You are just not allowed to use them in production.
 
 Note, on a server environment, you are encouraged to use a proper logging library and add these methods to the list of forbidden ones.
-
-## Block padding
-
-> AirBnB: https://github.com/airbnb/javascript#whitespace--padded-blocks
-
-If it makes reading the code easier, classes and methods may have **one** optional blank line at the beginning of their block.
 
 ## void 0 vs undefined
 
@@ -172,9 +168,9 @@ by preceding the next `case` statement with `// fallthrough`
 
 ```javascript
 // Invalid
-switch (GetType(aVar)) {
+switch (getType(aVar)) {
   case TYPE_NULL:
-    type = 'null'
+    type = 'null';
 
   case TYPE_OBJ:
     type = 'object';
@@ -188,9 +184,9 @@ switch (GetType(aVar)) {
 
 ```javascript
 // Valid
-switch (GetType(aVar)) {
+switch (getType(aVar)) {
   case TYPE_NULL:
-    type = 'null'
+    type = 'null';
 
   // fallthrough
   case TYPE_OBJ:
