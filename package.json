@@ -1,6 +1,6 @@
 {
   "name": "@foobarhq/eslint-config",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "description": "ESLint configuration for the foobarHQ JavaScript code style",
   "main": "lib/index.js",
   "private": false,
@@ -20,12 +20,12 @@
   "homepage": "https://github.com/foobarhq/eslint-config-foobarhq",
   "dependencies": {
     "babel-eslint": "^7.2.3",
-    "eslint": "^4.0.0",
-    "eslint-plugin-babel": "^4.1.1",
-    "eslint-plugin-flowtype": "^2.34.0",
-    "eslint-plugin-import": "^2.5.0",
-    "eslint-plugin-jsx-a11y": "^5.0.3",
-    "eslint-plugin-lodash": "^2.4.3",
+    "eslint": "^4.3.0",
+    "eslint-plugin-babel": "^4.1.2",
+    "eslint-plugin-flowtype": "^2.35.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-lodash": "^2.4.4",
     "eslint-plugin-react": "^7.1.0"
   }
 }

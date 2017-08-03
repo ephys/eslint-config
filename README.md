@@ -14,9 +14,9 @@ see [rules/](https://github.com/foobarhq/eslint-config-foobarhq/tree/master/rule
     }
     ```
 
-## Future Plugin Candidates
+## Cool plugin for your projects
 
-- https://github.com/amilajack/eslint-plugin-flowtype-errors
+- https://github.com/amilajack/eslint-plugin-compat
 - https://github.com/apollographql/eslint-plugin-graphql
 - https://github.com/Rantanen/eslint-plugin-xss
 - https://github.com/nodesecurity/eslint-plugin-security
