@@ -18,7 +18,7 @@ see [rules/](https://github.com/foobarhq/eslint-config-foobarhq/tree/master/rule
 
 We have more than one preset available for our different environments. You can enable these variants by inheriting from more of our configuration presets:
 
-```json
+```json5
 {
   "extends": [
     "@foobarhq/eslint-config",
