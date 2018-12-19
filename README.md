@@ -1,6 +1,6 @@
 # @foobarhq/eslint-config
 
-ESLint configuration for the foobarhq javascript style guide.
+ESLint configuration for the MAD Kings javascript style guide.
 
 see [rules/](https://github.com/foobarhq/eslint-config-foobarhq/tree/master/rules) for details on the code style.
 
@@ -14,10 +14,21 @@ see [rules/](https://github.com/foobarhq/eslint-config-foobarhq/tree/master/rule
     }
     ```
 
-## Cool plugin for your projects
+## Presets
 
-- https://github.com/amilajack/eslint-plugin-compat
-- https://github.com/apollographql/eslint-plugin-graphql
-- https://github.com/Rantanen/eslint-plugin-xss
-- https://github.com/nodesecurity/eslint-plugin-security
-- https://github.com/selaux/eslint-plugin-filenames
+We have more than one preset available for our different environments. You can enable these variants by inheriting from more of our configuration presets:
+
+```json
+{
+  "extends": [
+    "@foobarhq/eslint-config",
+    // add support for flowtype:
+    "@foobarhq/eslint-config/flow"
+  ]
+}
+```
+
+The following presets files are available:
+
+- `@foobarhq/eslint-config/flow`: [flow](http://flow.org) support.
+- `@foobarhq/eslint-config/browser`: Enable browser environment.
