@@ -18,7 +18,7 @@ module.exports = {
     'flowtype/require-parameter-type': 0,
     'flowtype/require-return-type': 0,
 
-    'flowtype/require-valid-file-annotation': ['always', { annotationStyle: 'line' }],
+    'flowtype/require-valid-file-annotation': [2, 'always', { annotationStyle: 'line' }],
     'flowtype/semi': [2, 'always'],
     'flowtype/space-before-type-colon': [2, 'never'],
     'flowtype/space-after-type-colon': [2, 'always'],
