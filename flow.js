@@ -9,17 +9,25 @@ module.exports = {
     'flowtype/delimiter-dangle': [2, 'always-multiline'],
     'flowtype/generic-spacing': [2, 'never'],
     'flowtype/no-dupe-keys': 2,
-    'flowtype/no-weak-types': 0,
+    'flowtype/no-primitive-constructor-types': 2,
+    'flowtype/no-weak-types': [2, {
+      any: false,
+      Object: true,
+      Function: true,
+    }],
     'flowtype/require-parameter-type': 0,
     'flowtype/require-return-type': 0,
 
-    'flowtype/require-valid-file-annotation': [2, 'never'],
+    'flowtype/require-valid-file-annotation': ['always', { annotationStyle: 'line' }],
     'flowtype/semi': [2, 'always'],
     'flowtype/space-before-type-colon': [2, 'never'],
     'flowtype/space-after-type-colon': [2, 'always'],
     'flowtype/space-before-generic-bracket': [2, 'never'],
     'flowtype/union-intersection-spacing': [2, 'always'],
     'flowtype/valid-syntax': 2,
+    'flowtype/spread-exact-type': 2,
+    'flowtype/no-mixed': 2,
+    // 'flowtype/type-import-style': [2, 'identifier', { ignoreTypeDefault: true }],
 
     'flowtype/newline-after-flow-annotation': [2, 'always'],
 
