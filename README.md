@@ -6,7 +6,7 @@ see [rules/](https://github.com/foobarhq/eslint-config-foobarhq/tree/master/rule
 
 ## Usage
 
-- Install using `npm i -D @foobarhq/eslint-config`
+- Install using `npm i -D @foobarhq/eslint-config`, `npm i -D @foobarhq/eslint-config-flow`, or `npm i -D @foobarhq/eslint-config-typescript`
 - Create a `.eslintrc` file containing the following:
     ```json
     {
@@ -23,12 +23,14 @@ We have more than one preset available for our different environments. You can e
   "extends": [
     "@foobarhq/eslint-config",
     // add support for flowtype:
-    "@foobarhq/eslint-config/flow"
+    "@foobarhq/eslint-config-flow"
   ]
 }
 ```
 
 The following presets files are available:
 
-- `@foobarhq/eslint-config/flow`: [flow](http://flow.org) support.
+- `@foobarhq/eslint-config-flow`: [flow](https://flow.org) support.
+- `@foobarhq/eslint-config-typescript`: [Typescript](https://www.typescriptlang.org/) support.
 - `@foobarhq/eslint-config/browser`: Enable browser environment.
+- `@foobarhq/eslint-config/node`: Enable node environment.
