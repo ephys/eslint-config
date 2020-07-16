@@ -102,7 +102,7 @@ module.exports = {
     'require-yield': 1,
 
     'no-void': 0,
-    'no-undefined': 2,
+    'no-undefined': 0, // allow using 'undefined'
     'no-undef': 2,
     'no-unused-vars': [2, { varsIgnorePattern: '^ignore' }],
 
@@ -394,5 +394,9 @@ module.exports = {
     // TODO consider:
     //  - prefer-named-capture-group
     //  - function-call-argument-newline
+  },
+
+  globals: {
+    globalThis: true,
   },
 };

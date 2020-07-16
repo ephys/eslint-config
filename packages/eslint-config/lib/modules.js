@@ -51,4 +51,17 @@ module.exports = {
 
     'no-import-assign': 2,
   },
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: [
+          '.js',
+          '.jsx',
+          '.mjs',
+          '.ts',
+          '.tsx',
+        ],
+      },
+    },
+  },
 };

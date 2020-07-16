@@ -1,0 +1,20 @@
+{
+  "name": "@foobarhq/eslint-config-flow",
+  "version": "7.0.1",
+  "description": "ESLint configuration for the foobarHQ JavaScript code style with Flow support",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/foobarhq/eslint-config-foobarhq.git"
+  },
+  "author": "Guylian Cox <hello@guylian.me>",
+  "license": "MIT",
+  "homepage": "https://github.com/foobarhq/eslint-config-foobarhq",
+  "dependencies": {
+    "eslint-plugin-flowtype": "^5.2.0",
+    "@foobarhq/eslint-config": "^7.0.1"
+  }
+}

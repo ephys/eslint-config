@@ -1,4 +1,7 @@
+'use strict';
+
 module.exports = {
+  extends: '@foobarhq/eslint-config',
   plugins: ['flowtype'],
   rules: {
     'flowtype/boolean-style': [2, 'boolean'],
