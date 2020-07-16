@@ -65,7 +65,9 @@ module.exports = {
 
     'function-paren-newline': [2, 'consistent'],
 
-    'no-extra-parens': [2, 'all', { ignoreJSX: 'multi-line' }],
+    // 'no-extra-parens': [2, 'all', { ignoreJSX: 'multi-line' }],
+    // disabled because parens sometimes make things clearer.
+    'no-extra-parens': 0,
 
     'object-shorthand': [2, 'always'],
 
