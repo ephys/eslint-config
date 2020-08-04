@@ -1,6 +1,6 @@
 {
   "name": "@foobarhq/eslint-config-typescript",
-  "version": "8.0.1",
+  "version": "8.0.2",
   "description": "ESLint configuration for the foobarHQ JavaScript code style with Typescript support",
   "main": "lib/index.js",
   "scripts": {
