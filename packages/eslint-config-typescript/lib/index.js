@@ -18,6 +18,9 @@ module.exports = {
     'no-useless-constructor': 'off',
     '@typescript-eslint/no-useless-constructor': 'error',
 
+    'default-param-last': 'off',
+    '@typescript-eslint/default-param-last': ['error'],
+
     // method signature overloading conflicts. Replaced by TSC in this case
     'no-dupe-class-members': 'off',
   },
