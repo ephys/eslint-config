@@ -15,8 +15,8 @@
   "homepage": "https://github.com/foobarhq/eslint-config-foobarhq",
   "dependencies": {
     "@foobarhq/eslint-config": "^8.0.1",
-    "@typescript-eslint/eslint-plugin": "^3.6.1",
-    "@typescript-eslint/eslint-plugin-tslint": "^3.6.1",
-    "@typescript-eslint/parser": "^3.6.1"
+    "@typescript-eslint/eslint-plugin": "^3.10.1",
+    "@typescript-eslint/eslint-plugin-tslint": "^3.10.1",
+    "@typescript-eslint/parser": "^3.10.1"
   }
 }
