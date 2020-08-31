@@ -38,11 +38,15 @@ module.exports = {
     'import/no-namespace': 0,
 
     // TODO enable once this is available https://github.com/benmosher/eslint-plugin-import/pull/555
-    'import/extensions': [0], // JS: Never, everthing else: always
+    'import/extensions': [0], // JS: Never, everything else: always
 
     'import/newline-after-import': 2,
     'import/order': ['error', {
       groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
+      alphabetize: {
+        order: 'asc',
+        caseInsensitive: false,
+      },
     }],
 
     'import/no-dynamic-require': 0,
