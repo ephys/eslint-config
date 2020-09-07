@@ -201,7 +201,6 @@ module.exports = {
       'ForInStatement',
       'WithStatement',
       'EmptyStatement',
-      'BinaryExpression[operator=\'in\']',
     ],
 
     'no-compare-neg-zero': 2,
