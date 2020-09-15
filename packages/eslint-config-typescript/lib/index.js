@@ -46,8 +46,9 @@ module.exports = {
     // method signature overloading conflicts. Replaced by TSC in this case
     'no-dupe-class-members': 'off',
 
+    // FIXME: https://github.com/typescript-eslint/typescript-eslint/issues/2538
     // if an import is only used as a type, require tagging it with `type` in the import so it can be removed
-    '@typescript-eslint/consistent-type-imports': ['error', { prefer: 'type-imports ' }],
+    // '@typescript-eslint/consistent-type-imports': ['error', { prefer: 'type-imports' }],
 
     /*
     TODO:
