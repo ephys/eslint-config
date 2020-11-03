@@ -392,6 +392,9 @@ module.exports = {
       { blankLine: 'any', prev: 'directive', next: 'directive' },
     ],
 
+    // Cool feature where if you use one of the following terms, you will prevent committing the file until you remove it
+    'no-warning-comments': ['error', { terms: ['!todo', '!fixme'] }],
+
     // TODO consider:
     //  - prefer-named-capture-group
     //  - function-call-argument-newline
