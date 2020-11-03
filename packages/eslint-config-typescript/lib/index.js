@@ -11,6 +11,9 @@ module.exports = {
     // '@typescript-eslint/tslint',
   ],
   rules: {
+    // this is handled by Typescript itself
+    'no-undef': 'off',
+
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': ['error', {
       'varsIgnorePattern': '^ignore',
