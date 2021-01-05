@@ -14,7 +14,7 @@ module.exports = {
     'react/no-string-refs': 2,
     'react/no-this-in-sfc': 2,
     'react/no-unused-state': 2,
-    'react/react-in-jsx-scope': 2,
+    // 'react/react-in-jsx-scope': 2,
     'react/require-render-return': 2,
     'react/self-closing-comp': 2,
 
@@ -34,7 +34,7 @@ module.exports = {
       prop: 'ignore',
     }],
     'react/jsx-uses-vars': 2,
-    'react/jsx-uses-react': 2,
+    // 'react/jsx-uses-react': 2,
     'react/jsx-no-undef': 2,
     'react/jsx-no-duplicate-props': 2,
     'react/jsx-fragments': [2, 'syntax'],
