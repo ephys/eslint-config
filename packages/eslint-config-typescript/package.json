@@ -1,6 +1,6 @@
 {
   "name": "@foobarhq/eslint-config-typescript",
-  "version": "10.1.0",
+  "version": "10.1.1",
   "description": "ESLint configuration for the foobarHQ JavaScript code style with Typescript support",
   "main": "lib/index.js",
   "scripts": {
@@ -14,7 +14,7 @@
   "license": "MIT",
   "homepage": "https://github.com/foobarhq/eslint-config-foobarhq",
   "dependencies": {
-    "@foobarhq/eslint-config": "^10.1.0",
+    "@foobarhq/eslint-config": "^10.1.1",
     "@typescript-eslint/eslint-plugin": "^4.1.1",
     "@typescript-eslint/eslint-plugin-tslint": "^4.1.1",
     "@typescript-eslint/parser": "^4.1.1"
