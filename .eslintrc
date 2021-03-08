@@ -1,5 +1,5 @@
 {
-  "extends": "./lib/index.js",
+  "extends": "./packages/eslint-config",
   "rules": {
     "import/no-commonjs": 0
   }
