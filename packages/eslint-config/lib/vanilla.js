@@ -80,7 +80,7 @@ module.exports = {
 
     'max-depth': [2, 4],
     'max-len': [2, {
-      code: 120,
+      code: 125,
       ignoreUrls: true,
       ignoreStrings: true,
       ignoreTemplateLiterals: true,
