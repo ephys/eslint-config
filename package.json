@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "fix-npm": "lerna exec -- rm -rf node_modules && rm package-lock.json && lerna bootstrap",
+    "fix-npm": "lerna exec -- rm -rf node_modules && rm -f package-lock.json && lerna bootstrap",
     "publish": "lerna publish"
   },
   "devDependencies": {

@@ -214,6 +214,7 @@ module.exports = {
     'no-dupe-args': 2,
     'no-dupe-keys': 2,
     'no-dupe-class-members': 2,
+    'lines-between-class-members': [2, 'always'],
     'no-useless-computed-key': 2,
     'no-empty': 2,
     'no-inner-declarations': 2,
@@ -252,7 +253,7 @@ module.exports = {
     'no-redeclare': 2,
     'no-self-compare': 2,
     'no-sequences': 2,
-    'no-throw-literal': 0,
+    'no-throw-literal': 2,
     'no-unmodified-loop-condition': 2,
     'no-unreachable-loop': 2,
     'no-unused-expressions': [2, {
