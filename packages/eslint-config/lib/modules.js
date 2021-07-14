@@ -1,7 +1,6 @@
 module.exports = {
   plugins: ['import'],
   rules: {
-    'no-duplicate-imports': 2,
     'import/no-unresolved': 2,
     'import/named': 2,
     'import/default': 2,
@@ -33,7 +32,6 @@ module.exports = {
     'import/no-amd': 2,
 
     'import/imports-first': 2,
-    'import/no-duplicates': 2,
 
     'import/no-namespace': 0,
 
@@ -64,8 +62,20 @@ module.exports = {
           '.mjs',
           '.ts',
           '.tsx',
+          '.d.ts',
         ],
       },
     },
   },
+
+  // these rules only run on vanilla or flow files
+  // typically because they're handled differently in TypeScript
+  overrides: [{
+    files: ['*.js', '*.jsx', '*.mjs'],
+    rules: {
+      // https://github.com/typescript-eslint/typescript-eslint/issues/3537
+      'import/no-duplicates': 0,
+      'no-duplicate-imports': 2,
+    },
+  }],
 };

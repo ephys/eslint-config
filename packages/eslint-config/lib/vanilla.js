@@ -3,20 +3,7 @@ module.exports = {
   rules: {
     eqeqeq: [2, 'always', { null: 'ignore' }],
     'babel/new-cap': 1,
-    'babel/semi': [2, 'always'],
     'semi-style': [2, 'last'],
-    'no-extra-semi': 2,
-    'comma-dangle': [2, {
-      arrays: 'always-multiline',
-      objects: 'always-multiline',
-      imports: 'always-multiline',
-      exports: 'always-multiline',
-      functions: 'always-multiline',
-    }],
-    'comma-spacing': [2, {
-      after: true,
-      before: false,
-    }],
     'comma-style': [2, 'last'],
     'generator-star-spacing': [2, 'before'],
     'yield-star-spacing': [2, {
@@ -24,7 +11,6 @@ module.exports = {
       after: true,
     }],
     'array-bracket-spacing': [2, 'never'],
-    'object-curly-spacing': [2, 'always'],
     'object-curly-newline': [2, {
       multiline: true,
       consistent: true,
@@ -35,15 +21,10 @@ module.exports = {
     // }],
     'template-tag-spacing': [2, 'never'],
     'computed-property-spacing': [2, 'never'],
-    'func-call-spacing': [2, 'never'],
     'key-spacing': [2, {
       beforeColon: false,
       afterColon: true,
       mode: 'strict',
-    }],
-    'keyword-spacing': [2, {
-      before: true,
-      after: true,
     }],
     'semi-spacing': [2, {
       before: false,
@@ -56,8 +37,6 @@ module.exports = {
     'rest-spread-spacing': [2, 'never'],
 
     'implicit-arrow-linebreak': [2, 'beside'],
-
-    quotes: [2, 'single', { allowTemplateLiterals: true }],
 
     'quote-props': [2, 'as-needed', { unnecessary: true }],
 
@@ -105,8 +84,6 @@ module.exports = {
 
     'no-void': 0,
     'no-undefined': 0, // allow using 'undefined'
-    'no-undef': 2,
-    'no-unused-vars': [2, { varsIgnorePattern: '^ignore' }],
 
     // Use private fields proposal (#)
     // TODO: enable when private fields are available everywhere
@@ -145,8 +122,6 @@ module.exports = {
     // 'no-extra-label': 2,
     // 'no-label-var': 2,
     'no-labels': 2,
-    'no-invalid-this': 0,
-    'babel/no-invalid-this': 2,
     'no-lone-blocks': 2,
 
     // not actual iterators, only spidermonkey's
@@ -157,7 +132,6 @@ module.exports = {
       number: true,
       string: true,
     }],
-    'no-loss-of-precision': 2,
 
     curly: 2,
     'no-bitwise': 0,
@@ -186,7 +160,6 @@ module.exports = {
     'class-methods-use-this': 0,
     // Rule is harmful as it ignores methods that return a promise (no await), and throw exceptions - https://github.com/eslint/eslint/issues/10000
     'require-await': 0,
-    'no-return-await': 2,
     'no-await-in-loop': 2,
     'prefer-promise-reject-errors': 2,
     'no-promise-executor-return': 2,
@@ -213,8 +186,6 @@ module.exports = {
     'no-debugger': 2,
     'no-dupe-args': 2,
     'no-dupe-keys': 2,
-    'no-dupe-class-members': 2,
-    'lines-between-class-members': [2, 'always'],
     'no-useless-computed-key': 2,
     'no-empty': 2,
     'no-inner-declarations': 2,
@@ -227,7 +198,6 @@ module.exports = {
     'valid-typeof': 2,
     'array-callback-return': [2, { allowImplicit: true }],
     'dot-location': [2, 'property'],
-    'dot-notation': 2,
     'no-caller': 2,
     'no-implicit-globals': 2,
     'no-self-assign': 2,
@@ -236,30 +206,21 @@ module.exports = {
     'no-unsafe-finally': 2,
     'no-empty-pattern': 2,
     'no-eval': 2,
-    'no-implied-eval': 2,
     'no-extend-native': 2,
     'no-floating-decimal': 2,
     'no-global-assign': 2,
-    'no-loop-func': 2,
     'no-multi-spaces': 2,
     'no-new': 0,
     'no-new-func': 2,
     'no-new-wrappers': 2,
     'no-new-symbol': 2,
-    'no-array-constructor': 2,
     'no-new-object': 2,
     'no-octal': 2,
     'no-octal-escape': 2,
-    'no-redeclare': 2,
     'no-self-compare': 2,
     'no-sequences': 2,
-    'no-throw-literal': 2,
     'no-unmodified-loop-condition': 2,
     'no-unreachable-loop': 2,
-    'no-unused-expressions': [2, {
-      allowShortCircuit: true,
-      allowTernary: true,
-    }],
     'no-useless-call': 2,
     'no-useless-concat': 2,
     'no-useless-escape': 2,
@@ -268,9 +229,6 @@ module.exports = {
     radix: [2, 'always'],
     'wrap-iife': [2, 'outside', { functionPrototypeMethods: true }],
     yoda: [2, 'never', { exceptRange: true }],
-    'no-shadow': [2, {
-      allow: ['i', 'j', 'k', 'l'],
-    }],
     'no-delete-var': 2,
     'no-mixed-spaces-and-tabs': 2,
     'no-trailing-spaces': 2,
@@ -320,7 +278,6 @@ module.exports = {
     'one-var': [2, 'never'],
     'unicode-bom': 2,
     'no-constructor-return': 2,
-    'no-useless-constructor': 2,
     'constructor-super': 2,
     'no-this-before-super': 2,
     'no-useless-rename': 2,
@@ -342,22 +299,14 @@ module.exports = {
 
     'no-multiple-empty-lines': [2, { max: 1 }],
     'block-spacing': [2, 'always'],
-    'brace-style': [2, '1tbs'],
     camelcase: [2, { properties: 'never' }],
-    'space-before-function-paren': [2, {
-      anonymous: 'always',
-      named: 'never',
-      asyncArrow: 'always',
-    }],
     'space-in-parens': [2, 'never'],
-    'space-infix-ops': [2],
     'space-unary-ops': [2, {
       words: true,
       nonwords: false,
     }],
     'no-useless-catch': 'error',
     'no-confusing-arrow': 'error',
-    'default-param-last': ['error'],
     'prefer-regex-literals': 2,
 
     // http://eslint.org/docs/rules/padding-line-between-statements
@@ -404,4 +353,73 @@ module.exports = {
   globals: {
     globalThis: true,
   },
+
+  // these rules only run on vanilla or flow files
+  // typically because they're handled differently in TypeScript
+  overrides: [{
+    files: ['*.js', '*.jsx', '*.mjs'],
+    rules: {
+
+      'no-undef': 2,
+      'no-unused-vars': [2, {
+        'varsIgnorePattern': '^ignore',
+        'argsIgnorePattern': '^ignore|^_',
+      }],
+      'no-useless-constructor': 2,
+      'default-param-last': 'error',
+      'space-before-function-paren': [2, {
+        anonymous: 'always',
+        named: 'never',
+        asyncArrow: 'always',
+      }],
+      'no-shadow': [2, {
+        allow: ['i', 'j', 'k', 'l'],
+      }],
+      'no-redeclare': 2,
+      'no-loop-func': 2,
+      'babel/semi': [2, 'always'],
+
+      'no-extra-semi': 2,
+      'dot-notation': 2,
+      'space-infix-ops': 2,
+
+      'no-return-await': 2,
+
+      quotes: [2, 'single', { allowTemplateLiterals: true }],
+      'object-curly-spacing': [2, 'always'],
+      'no-unused-expressions': [2, {
+        allowShortCircuit: true,
+        allowTernary: true,
+      }],
+      'no-throw-literal': 2,
+      'no-loss-of-precision': 2,
+
+      'no-invalid-this': 0,
+      'babel/no-invalid-this': 2,
+
+      'no-implied-eval': 2,
+      'no-dupe-class-members': 2,
+      'no-array-constructor': 2,
+      'lines-between-class-members': [2, 'always', {
+        exceptAfterSingleLine: true,
+      }],
+      'func-call-spacing': [2, 'never'],
+      'comma-spacing': [2, {
+        after: true,
+        before: false,
+      }],
+      'brace-style': [2, '1tbs'],
+      'comma-dangle': [2, {
+        arrays: 'always-multiline',
+        objects: 'always-multiline',
+        imports: 'always-multiline',
+        exports: 'always-multiline',
+        functions: 'always-multiline',
+      }],
+      'keyword-spacing': [2, {
+        before: true,
+        after: true,
+      }],
+    },
+  }],
 };
