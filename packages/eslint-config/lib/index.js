@@ -6,7 +6,6 @@ module.exports = {
     './vanilla',
     './switch-case',
     './regex',
-    './react',
     './lodash',
     './dom',
   ].map(require.resolve),
