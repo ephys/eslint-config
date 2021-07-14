@@ -1,3 +1,16 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+# [11.0.0](https://github.com/madkingsag/eslint-config/compare/v11.0.0-alpha.3...v11.0.0) (2021-07-14)
+
+**Note:** Version bump only for package eslint-config
+
+
+
+
+
 # Changelog
 
 ## 8.0.0 (2020-07-16)

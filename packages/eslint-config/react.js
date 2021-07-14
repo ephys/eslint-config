@@ -104,4 +104,9 @@ module.exports = {
     'react/require-extension': 0,
     'react/sort-comp': 0,
   },
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
 };
