@@ -124,7 +124,9 @@ module.exports = {
         checksVoidReturn: false,
       }],
       '@typescript-eslint/no-require-imports': 'error',
-      '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'error',
+
+      // disable for now because it doesn't handle ?. operator properly (eg. user?.isRegistered === false)
+      // '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'error',
       '@typescript-eslint/no-unnecessary-type-assertion': 'error',
       '@typescript-eslint/no-unnecessary-type-constraint': 'error',
       // '@typescript-eslint/no-unsafe-return': 'error',
