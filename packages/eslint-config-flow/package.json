@@ -1,6 +1,6 @@
 {
   "name": "@foobarhq/eslint-config-flow",
-  "version": "11.0.0",
+  "version": "11.0.1",
   "description": "ESLint configuration for the foobarHQ JavaScript code style with Flow support",
   "main": "lib/index.js",
   "scripts": {
@@ -14,7 +14,7 @@
   "license": "MIT",
   "homepage": "https://github.com/foobarhq/eslint-config-foobarhq",
   "dependencies": {
-    "@foobarhq/eslint-config": "^11.0.0",
+    "@foobarhq/eslint-config": "^11.0.1",
     "eslint-plugin-flowtype": "^5.2.0"
   }
 }
