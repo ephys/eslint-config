@@ -185,6 +185,10 @@ module.exports = {
 
       // if an import is only used as a type, require tagging it with `type` in the import so it can be removed
       '@typescript-eslint/consistent-type-imports': ['error', { prefer: 'type-imports' }],
+
+      '@typescript-eslint/prefer-return-this-type': 'error',
+
+      // TODO: padding-line-between-statements
     },
     settings: {
       'import/parsers': {
