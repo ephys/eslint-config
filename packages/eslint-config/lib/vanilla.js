@@ -248,6 +248,14 @@ module.exports = {
         name: 'fdescribe',
         message: 'Do not commit fdescribe. Use describe instead.',
       },
+      // commonly named local variable
+      ...commonlyNamedGlobals(['name', 'location', 'history', 'blur', 'caches', 'close', 'closed',
+        'content', 'devicePixelRatio', 'focus', 'find', 'external', 'frames', 'fullScreen', 'innerHeight', 'innerWidth',
+        'length', 'isSecureContext', 'opener', 'origin', 'outerHeight', 'outerWidth', 'parent', 'print',
+        'resizeBy', 'resizeTo', 'screen', 'screenLeft', 'screenTop', 'screenX', 'screenY', 'scroll',
+        'scrollBy', 'scrollByLines', 'scrollByPages', 'scrollMaxX', 'scrollMaxY', 'scrollX', 'scrollY',
+        'scrollbars', 'sidebar', 'sizeToContent', 'speechSynthesis', 'status', 'statusbar', 'stop', 'toolbar', 'top', 'u2f',
+        'updateCommands', 'visualViewport']),
       {
         name: 'parseInt',
         message: 'Use Number.parseInt',
@@ -423,3 +431,12 @@ module.exports = {
     },
   }],
 };
+
+function commonlyNamedGlobals(names) {
+  return names.map(name => {
+    return {
+      name,
+      message: `Do not use global with common names implicitly. Use globalThis.${name}.`,
+    }
+  });
+}
