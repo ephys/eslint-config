@@ -307,7 +307,10 @@ module.exports = {
 
     'no-multiple-empty-lines': [2, { max: 1 }],
     'block-spacing': [2, 'always'],
-    camelcase: [2, { properties: 'never' }],
+    camelcase: [2, {
+      properties: 'never',
+      allow: ['^TEST_', '^UNSAFE_'],
+    }],
     'space-in-parens': [2, 'never'],
     'space-unary-ops': [2, {
       words: true,
