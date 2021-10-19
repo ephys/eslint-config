@@ -1,6 +1,6 @@
 {
   "name": "@foobarhq/eslint-config",
-  "version": "11.1.0",
+  "version": "11.1.1",
   "description": "ESLint configuration for the foobarHQ JavaScript code style",
   "main": "lib/index.js",
   "scripts": {
