@@ -62,6 +62,8 @@ module.exports = {
           '.mjs',
           '.ts',
           '.tsx',
+          '.mts',
+          '.cts',
           '.d.ts',
         ],
       },

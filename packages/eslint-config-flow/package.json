@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+ssh://git@github.com/foobarhq/eslint-config-foobarhq.git"
   },
-  "author": "Guylian Cox <hello@guylian.me>",
+  "author": "Zoé Cox <zoe@ephys.dev>",
   "license": "MIT",
   "homepage": "https://github.com/foobarhq/eslint-config-foobarhq",
   "dependencies": {
