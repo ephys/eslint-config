@@ -6,11 +6,9 @@ module.exports = {
   extends: '@foobarhq/eslint-config',
   parser: '@typescript-eslint/parser',
   overrides: [{
-    files: ['*.ts', '*.tsx', '*.d.ts'],
+    files: ['*.ts', '*.tsx', '*.mts', '*.cts', '*.d.ts'],
     plugins: [
       '@typescript-eslint',
-      // TODO
-      // '@typescript-eslint/tslint',
     ],
     rules: {
       '@typescript-eslint/no-unused-vars': ['error', {
@@ -192,7 +190,7 @@ module.exports = {
     },
     settings: {
       'import/parsers': {
-        '@typescript-eslint/parser': ['.ts', '.tsx', '.d.ts'],
+        '@typescript-eslint/parser': ['.ts', '.tsx', '.cts', '.mts', '.d.ts'],
         '@babel/eslint-parser': ['.js', '.jsx', '.mjs'],
       },
     },
