@@ -239,6 +239,7 @@ module.exports = {
     'prefer-const': 2,
     'prefer-rest-params': 2,
     'prefer-spread': 2,
+    'prefer-object-has-own': 2,
     'no-restricted-globals': [2,
       {
         name: 'event',

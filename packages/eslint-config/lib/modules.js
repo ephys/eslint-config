@@ -3,16 +3,18 @@ module.exports = {
   rules: {
     'import/no-unresolved': 2,
     'import/named': 2,
-    'import/default': 2,
+    // some libraries use typings to declare themselves as ES Modules even though they are not
+    'import/default': 'off',
     'import/no-absolute-path': 2,
     'import/no-useless-path-segments': [2, {
-      noUselessIndex: true,
+      // we support native ESM which requires specifying the actual path (or using package.json)
+      noUselessIndex: false,
     }],
     'import/no-self-import': 2,
 
     'import/export': 2,
     'import/no-named-as-default': 1,
-    'import/no-named-as-default-member': 1,
+    'import/no-named-as-default-member': 0,
 
     'import/no-deprecated': 1,
     'import/no-extraneous-dependencies': [2, {
@@ -35,8 +37,10 @@ module.exports = {
 
     'import/no-namespace': 0,
 
-    // TODO enable once this is available https://github.com/benmosher/eslint-plugin-import/pull/555
-    'import/extensions': [0], // JS: Never, everything else: always
+    // disabled because .ts files must be imported using .js
+    // https://github.com/import-js/eslint-plugin-import/issues/2170
+    // ideally replace with https://github.com/import-js/eslint-plugin-import/issues/2319
+    // 'import/extensions': ['error', 'ignorePackages'],
 
     'import/newline-after-import': 2,
     'import/order': ['error', {
