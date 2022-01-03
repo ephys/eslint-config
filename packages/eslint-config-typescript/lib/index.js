@@ -3,7 +3,7 @@
 // https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin/docs/rules
 
 module.exports = {
-  extends: '@foobarhq/eslint-config',
+  extends: ['@foobarhq/eslint-config'],
   overrides: [{
     files: ['*.ts', '*.tsx', '*.mts', '*.cts', '*.d.ts'],
     parser: '@typescript-eslint/parser',
@@ -194,11 +194,15 @@ module.exports = {
         '@babel/eslint-parser': ['.js', '.jsx', '.mjs'],
       },
       'import/resolver': {
-        typescript: {},
+        'eslint-import-resolver-typescript': {},
       },
     },
     parserOptions: {
       project: ['./tsconfig.json'],
+      requireConfigFile: false,
     },
   }],
+  parserOptions: {
+    requireConfigFile: false,
+  },
 };
