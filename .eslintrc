@@ -1,6 +1,0 @@
-{
-  "extends": "./packages/eslint-config",
-  "rules": {
-    "import/no-commonjs": 0
-  }
-}

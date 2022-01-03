@@ -21,5 +21,6 @@ module.exports = {
     ecmaFeatures: {
       experimentalObjectRestSpread: true,
     },
+    requireConfigFile: false,
   },
 };

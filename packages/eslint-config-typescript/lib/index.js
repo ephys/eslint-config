@@ -9,9 +9,10 @@ module.exports = {
     parser: '@typescript-eslint/parser',
     plugins: ['@typescript-eslint'],
     rules: {
+      'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': ['error', {
-        'varsIgnorePattern': '^ignore',
-        'argsIgnorePattern': '^ignore|^_',
+        varsIgnorePattern: '^ignore',
+        argsIgnorePattern: '^ignore|^_',
       }],
 
       '@typescript-eslint/no-useless-constructor': 'error',
@@ -181,6 +182,7 @@ module.exports = {
 
       // if an import is only used as a type, require tagging it with `type` in the import so it can be removed
       '@typescript-eslint/consistent-type-imports': ['error', { prefer: 'type-imports' }],
+      '@typescript-eslint/consistent-type-exports': ['error', { fixMixedExportsWithInlineTypeSpecifier: true }],
 
       '@typescript-eslint/prefer-return-this-type': 'error',
 

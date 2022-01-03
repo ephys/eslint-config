@@ -41,6 +41,7 @@ module.exports = {
     'import/newline-after-import': 2,
     'import/order': ['error', {
       groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
+      'newlines-between': 'never',
       alphabetize: {
         order: 'asc',
         caseInsensitive: false,

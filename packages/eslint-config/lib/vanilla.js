@@ -168,7 +168,7 @@ module.exports = {
     'prefer-numeric-literals': 2,
     'symbol-description': 2,
     'no-unsafe-negation': [2, {
-      "enforceForOrderingRelations": true
+      enforceForOrderingRelations: true,
     }],
     'no-restricted-syntax': [2,
       'ForInStatement',
@@ -373,8 +373,8 @@ module.exports = {
 
       'no-undef': 2,
       'no-unused-vars': [2, {
-        'varsIgnorePattern': '^ignore',
-        'argsIgnorePattern': '^ignore|^_',
+        varsIgnorePattern: '^ignore',
+        argsIgnorePattern: '^ignore|^_',
       }],
       'no-useless-constructor': 2,
       'default-param-last': 'error',
@@ -440,6 +440,6 @@ function commonlyNamedGlobals(names) {
     return {
       name,
       message: `Do not use global with common names implicitly. Use globalThis.${name}.`,
-    }
+    };
   });
 }
