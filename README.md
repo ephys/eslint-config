@@ -23,7 +23,9 @@ We have more than one preset available for our different environments. You can e
   "extends": [
     "@foobarhq/eslint-config",
     // add support for flowtype:
-    "@foobarhq/eslint-config-flow"
+    "@foobarhq/eslint-config-flow",
+    // add support for typescript:
+    "@foobarhq/eslint-config-typescript"
   ]
 }
 ```

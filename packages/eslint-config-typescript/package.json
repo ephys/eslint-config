@@ -16,6 +16,7 @@
   "dependencies": {
     "@foobarhq/eslint-config": "^11.1.2",
     "@typescript-eslint/eslint-plugin": "^4.32.0",
-    "@typescript-eslint/parser": "^4.32.0"
+    "@typescript-eslint/parser": "^4.32.0",
+    "eslint-import-resolver-typescript": "^2.5.0"
   }
 }
