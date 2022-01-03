@@ -8,6 +8,7 @@ module.exports = {
     './regex',
     './lodash',
     './dom',
+    './json',
   ].map(require.resolve),
   reportUnusedDisableDirectives: true,
   env: {
