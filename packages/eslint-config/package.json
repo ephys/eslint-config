@@ -1,6 +1,6 @@
 {
   "name": "@ephys/eslint-config",
-  "version": "12.0.0",
+  "version": "13.0.0",
   "description": "ESLint configuration for the foobarHQ JavaScript code style",
   "main": "lib/index.js",
   "scripts": {
@@ -28,7 +28,7 @@
     "eslint-plugin-lodash": "^7.3.0",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
-    "eslint-plugin-unicorn": "^40.0.0",
-    "eslint-plugin-small-import": "^1.0.0"
+    "eslint-plugin-small-import": "^1.0.0",
+    "eslint-plugin-unicorn": "^40.0.0"
   }
 }
