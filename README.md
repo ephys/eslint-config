@@ -28,3 +28,8 @@ The following presets files are available:
 - `@ephys/eslint-config/browser`: Enable browser environment.
 - `@ephys/eslint-config/react`: Turn on react-specific rules.
 - `@ephys/eslint-config/node`: Enable node environment.
+- `@ephys/eslint-config/jest`: Enable jest-specific rules.
+- `@ephys/eslint-config/commonjs`: We assume ESM. Use this preset to require commonjs instead. 
+  Note that you only need to this preset to treat `.js` files as CJS. `.cjs` files will already be treated as CJS.
+
+Note: All of these presets are also available from `@ephys/eslint-config-typescript/<preset>`.

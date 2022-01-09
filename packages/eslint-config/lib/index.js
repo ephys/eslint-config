@@ -1,7 +1,9 @@
+const { cjsRules, esmRules } = require('./commonjs-rules');
+
 module.exports = {
   parser: '@babel/eslint-parser',
   extends: [
-    './jsdoc',
+    // './jsdoc', // TODO: replace with gajus/jsdoc
     './modules',
     './vanilla',
     './switch-case',
@@ -10,7 +12,7 @@ module.exports = {
     './dom',
     './json',
     './unicorn',
-  ].map(require.resolve),
+  ].map(path => require.resolve(path)),
   reportUnusedDisableDirectives: true,
   env: {
     node: true,
@@ -21,4 +23,9 @@ module.exports = {
     sourceType: 'module',
     requireConfigFile: false,
   },
+  rules: esmRules,
+  overrides: [{
+    files: ['*.cjs', '*.cts'],
+    rules: cjsRules,
+  }],
 };

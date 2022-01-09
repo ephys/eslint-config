@@ -73,7 +73,8 @@ module.exports = {
     'newline-per-chained-call': [2, { ignoreChainWithDepth: 3 }],
     'no-console': [1, { allow: ['warn', 'error', 'info'] }],
 
-    'no-use-before-define': [2, { functions: false }],
+    // too often, this rule gets in the way.
+    // 'no-use-before-define': [2, { functions: false }],
     'template-curly-spacing': [2, 'never'],
     'prefer-template': 2,
     'no-multi-str': 2,
@@ -236,7 +237,9 @@ module.exports = {
     'no-multi-assign': 2,
     'no-whitespace-before-property': 2,
     'no-var': 2,
-    'prefer-const': 2,
+    'prefer-const': [2, {
+      destructuring: 'all',
+    }],
     'prefer-rest-params': 2,
     'prefer-spread': 2,
     'prefer-object-has-own': 2,
@@ -395,7 +398,7 @@ module.exports = {
       'dot-notation': 2,
       'space-infix-ops': 2,
 
-      'no-return-await': 2,
+      // 'no-return-await': 2,
 
       quotes: [2, 'single', { allowTemplateLiterals: true }],
       'object-curly-spacing': [2, 'always'],

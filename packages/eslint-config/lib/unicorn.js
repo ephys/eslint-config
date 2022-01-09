@@ -1,4 +1,5 @@
 module.exports = {
+  plugins: ['unicorn'],
   rules: {
     'unicorn/better-regex': 'error',
     'unicorn/catch-error-name': 'error',
@@ -9,7 +10,8 @@ module.exports = {
     'unicorn/error-message': 'error',
     'unicorn/escape-case': 'error',
 
-    'unicorn/explicit-length-check': 'error',
+    // Too many false positives
+    // 'unicorn/explicit-length-check': 'error',
     'unicorn/filename-case': 'error',
 
     'unicorn/new-for-builtins': 'error',
@@ -70,10 +72,10 @@ module.exports = {
     'unicorn/prefer-keyboard-event-key': 'error',
     'unicorn/prefer-math-trunc': 'error',
     'unicorn/prefer-modern-dom-apis': 'error',
-    'unicorn/prefer-module': 'error',
     'unicorn/prefer-negative-index': 'error',
     'unicorn/prefer-node-protocol': 'error',
-    'unicorn/prefer-number-properties': 'error',
+    // handled by no-restricted-globals
+    // 'unicorn/prefer-number-properties': 'error',
     'unicorn/prefer-object-from-entries': 'error',
     'unicorn/prefer-optional-catch-binding': 'error',
     'unicorn/prefer-prototype-methods': 'error',
@@ -87,8 +89,8 @@ module.exports = {
     'unicorn/prefer-string-starts-ends-with': 'error',
     'unicorn/prefer-string-trim-start-end': 'error',
     'unicorn/prefer-switch': 'error',
-    'unicorn/prefer-ternary': 'error',
-    'unicorn/prefer-top-level-await': 'error',
+    // 'unicorn/prefer-ternary': 'error',
+
     'unicorn/prefer-type-error': 'error',
     'unicorn/prevent-abbreviations': 'error',
     'unicorn/relative-url-style': ['error', 'always'],

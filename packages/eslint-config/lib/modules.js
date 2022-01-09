@@ -1,7 +1,8 @@
 module.exports = {
   plugins: ['import', 'small-import'],
   rules: {
-    'import/no-unresolved': 2,
+    // not ready for node 12's 'exports' yet.
+    // 'import/no-unresolved': 2,
     'import/named': 2,
     // some libraries use typings to declare themselves as ES Modules even though they are not
     'import/default': 'off',
