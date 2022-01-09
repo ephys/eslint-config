@@ -1,5 +1,5 @@
 module.exports = {
-  plugins: ['import'],
+  plugins: ['import', 'small-import'],
   rules: {
     'import/no-unresolved': 2,
     'import/named': 2,
@@ -57,6 +57,16 @@ module.exports = {
     'import/max-dependencies': 0,
 
     'no-import-assign': 2,
+
+    'small-import/no-full-import': ['error', {
+      packages: {
+        lodash: '/',
+        'date-fns': '/',
+        rambda: '/src/',
+        '@mui/material': '/',
+        '@mui/icons-material': '/',
+      },
+    }],
   },
   settings: {
     'import/resolver': {

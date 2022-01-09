@@ -9,6 +9,7 @@ module.exports = {
     './lodash',
     './dom',
     './json',
+    './unicorn',
   ].map(require.resolve),
   reportUnusedDisableDirectives: true,
   env: {
