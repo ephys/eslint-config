@@ -9,5 +9,8 @@
     "eslint": "^8.6.0",
     "lerna": "^4.0.0"
   },
-  "name": "eslint-config"
+  "name": "eslint-config",
+  "publishConfig": {
+    "access": "public"
+  }
 }
