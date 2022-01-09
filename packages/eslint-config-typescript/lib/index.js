@@ -3,7 +3,7 @@
 // https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin/docs/rules
 
 module.exports = {
-  extends: ['@foobarhq/eslint-config'],
+  extends: ['@ephys/eslint-config'],
   overrides: [{
     files: ['*.ts', '*.tsx', '*.mts', '*.cts', '*.d.ts'],
     parser: '@typescript-eslint/parser',

@@ -1,16 +1,14 @@
-# @foobarhq/eslint-config
+# @ephys/eslint-config
 
-ESLint configuration for the MAD Kings javascript style guide.
-
-see [rules/](https://github.com/foobarhq/eslint-config-foobarhq/tree/master/rules) for details on the code style.
+Custom-built ESLint configuration designed for use in ESM, CJS, TypeScript, Vanilla JS, React & Node.
 
 ## Usage
 
-- Install using `npm i -D @foobarhq/eslint-config`, `npm i -D @foobarhq/eslint-config-flow`, or `npm i -D @foobarhq/eslint-config-typescript`
+- Install using `npm i -D @ephys/eslint-config` or `npm i -D @ephys/eslint-config-typescript`
 - Create a `.eslintrc` file containing the following:
     ```json
     {
-      "extends": "@foobarhq/eslint-config"
+      "extends": "@ephys/eslint-config"
     }
     ```
 
@@ -21,18 +19,17 @@ We have more than one preset available for our different environments. You can e
 ```json5
 {
   "extends": [
-    "@foobarhq/eslint-config",
-    // add support for flowtype:
-    "@foobarhq/eslint-config-flow",
-    // add support for typescript:
-    "@foobarhq/eslint-config-typescript"
+    // add this if you're using Vanilla JS.
+    "@ephys/eslint-config",
+    // or this if you're using TypeScript and Vanilla JS.
+    "@ephys/eslint-config-typescript"
   ]
 }
 ```
 
 The following presets files are available:
 
-- `@foobarhq/eslint-config-flow`: [flow](https://flow.org) support.
-- `@foobarhq/eslint-config-typescript`: [Typescript](https://www.typescriptlang.org/) support.
-- `@foobarhq/eslint-config/browser`: Enable browser environment.
-- `@foobarhq/eslint-config/node`: Enable node environment.
+- `@ephys/eslint-config-typescript`: [Typescript](https://www.typescriptlang.org/) support.
+- `@ephys/eslint-config/browser`: Enable browser environment.
+- `@ephys/eslint-config/react`: Turn on react-specific rules.
+- `@ephys/eslint-config/node`: Enable node environment.
