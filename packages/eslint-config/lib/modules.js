@@ -11,7 +11,8 @@ module.exports = {
       // we support native ESM which requires specifying the actual path (or using package.json)
       noUselessIndex: false,
     }],
-    'import/no-self-import': 2,
+    // Too slow
+    // 'import/no-self-import': 2,
 
     'import/export': 2,
     'import/no-named-as-default': 1,

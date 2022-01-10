@@ -1,7 +1,8 @@
 module.exports = {
   plugins: ['unicorn'],
   rules: {
-    'unicorn/better-regex': 'error',
+    // Very slow
+    // 'unicorn/better-regex': 'error',
     'unicorn/catch-error-name': 'error',
 
     'unicorn/consistent-function-scoping': 'error',
