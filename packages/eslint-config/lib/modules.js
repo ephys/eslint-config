@@ -96,18 +96,5 @@ module.exports = {
       'import/no-duplicates': 0,
       'no-duplicate-imports': 2,
     },
-  }, {
-    // allow commonjs in files that do not support esm yet
-    files: [
-      '.eslintrc.js',
-      'postcss.config.js',
-      'babel.config.js',
-      'jest.config.js',
-      'commitlint.config.js',
-      '*.cjs',
-    ],
-    rules: {
-      'import/no-commonjs': 'off',
-    },
   }],
 };
