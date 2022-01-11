@@ -93,7 +93,8 @@ module.exports = {
     // 'unicorn/prefer-ternary': 'error',
 
     'unicorn/prefer-type-error': 'error',
-    'unicorn/prevent-abbreviations': 'error',
+    // Too opinionated
+    // 'unicorn/prevent-abbreviations': 'off',
     'unicorn/relative-url-style': ['error', 'always'],
     'unicorn/require-array-join-separator': 'error',
     'unicorn/require-number-to-fixed-digits-argument': 'error',
