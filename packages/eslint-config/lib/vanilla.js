@@ -71,7 +71,12 @@ module.exports = {
     'max-statements-per-line': [2, { max: 1 }],
 
     'newline-per-chained-call': [2, { ignoreChainWithDepth: 3 }],
-    'no-console': [1, { allow: ['warn', 'error', 'info'] }],
+    // people are still allowed (and encouraged!) to use console.log while debugging,
+    // this rule is here to remind them to remove it once they're done.
+    // using something else than "console.log" is treated as an intentional logging that can be published.
+    'no-console': ['error', {
+      allow: ['debug', 'info', 'warn', 'error'],
+    }],
 
     // too often, this rule gets in the way.
     // 'no-use-before-define': [2, { functions: false }],
