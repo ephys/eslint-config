@@ -102,5 +102,6 @@ module.exports = {
     // 'unicorn/string-content',
     'unicorn/template-indent': 'warn',
     'unicorn/throw-new-error': 'error',
+    'unicorn/expiring-todo-comments': 'warn',
   },
 };
