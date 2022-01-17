@@ -16,4 +16,4 @@ jobs:
         with:
           node-version: 16.x
       - run: npm ci
-      - run: npx semantic-release
+      - run: npm run publish-ci

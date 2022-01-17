@@ -1,17 +1,21 @@
 {
   "private": true,
+  "version": "0.0.0-semantically-released",
   "scripts": {
     "fix-npm": "lerna exec -- rm -rf node_modules && rm -f package-lock.json && lerna bootstrap",
-    "publish": "lerna publish"
+    "publish-ci": "npx multi-semantic-release"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.0",
     "@semantic-release/changelog": "^6.0.1",
     "eslint": "^8.6.0",
     "lerna": "^4.0.0",
+    "multi-semantic-release": "^2.11.0",
     "semantic-release": "^18.0.1"
   },
-  "name": "eslint-config",
+  "workspaces": [
+    "packages/*"
+  ],
   "publishConfig": {
     "access": "public"
   },
