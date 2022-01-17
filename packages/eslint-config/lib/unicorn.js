@@ -104,4 +104,14 @@ module.exports = {
     'unicorn/throw-new-error': 'error',
     'unicorn/expiring-todo-comments': 'warn',
   },
+  overrides: [{
+    files: [
+      '**/*.{spec,test}.*',
+      '**/(tests|spec|__tests__|__spec__|test|__test__)/**/*',
+    ],
+    rules: {
+      // it's ok to be less efficient in tests for clarity
+      'unicorn/consistent-function-scoping': 'off',
+    },
+  }],
 };
