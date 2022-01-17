@@ -204,6 +204,11 @@ module.exports = {
       project: ['./tsconfig.json'],
       requireConfigFile: false,
     },
+  }, {
+    files: ['*.cts'],
+    rules: {
+      '@typescript-eslint/no-require-imports': 'off',
+    },
   }],
   parserOptions: {
     requireConfigFile: false,

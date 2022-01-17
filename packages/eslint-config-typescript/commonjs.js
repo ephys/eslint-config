@@ -1,1 +1,9 @@
-module.exports = require('@ephys/eslint-config/commonjs');
+module.exports = {
+  extends: ['@ephys/eslint-config/commonjs'],
+  overrides: [{
+    files: ['*.ts'],
+    rules: {
+      '@typescript-eslint/no-require-imports': 'off',
+    },
+  }],
+};
