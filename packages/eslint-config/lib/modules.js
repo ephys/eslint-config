@@ -15,10 +15,12 @@ module.exports = {
     // 'import/no-self-import': 2,
 
     'import/export': 2,
-    'import/no-named-as-default': 1,
+    // too slow
+    'import/no-named-as-default': 0,
     'import/no-named-as-default-member': 0,
 
-    'import/no-deprecated': 1,
+    // too slow
+    'import/no-deprecated': 0,
     'import/no-extraneous-dependencies': [2, {
       peerDependencies: true,
     }],

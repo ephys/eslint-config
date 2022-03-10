@@ -6,7 +6,8 @@ module.exports = {
     'unicorn/catch-error-name': 'error',
 
     'unicorn/consistent-function-scoping': 'error',
-    'unicorn/custom-error-definition': 'error',
+    // this rule tends to break code
+    'unicorn/custom-error-definition': 'off',
     'unicorn/empty-brace-spaces': 'error',
     'unicorn/error-message': 'error',
     'unicorn/escape-case': 'error',
@@ -17,7 +18,8 @@ module.exports = {
 
     'unicorn/new-for-builtins': 'error',
     'unicorn/no-abusive-eslint-disable': 'error',
-    'unicorn/no-array-callback-reference': 'error',
+    // TypeScript does a better job at catching issues with this
+    'unicorn/no-array-callback-reference': 'off',
     'unicorn/no-array-for-each': 'error',
     'unicorn/no-array-method-this-argument': 'error',
     'unicorn/no-array-push-push': 'error',
