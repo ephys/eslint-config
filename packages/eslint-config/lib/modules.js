@@ -69,6 +69,8 @@ module.exports = {
         rambda: '/src/',
         '@mui/material': '/',
         '@mui/icons-material': '/',
+        '@material-ui/core': '/',
+        '@material-ui/icons': '/',
       },
     }],
   },
