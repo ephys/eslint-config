@@ -440,6 +440,7 @@ module.exports = {
         before: true,
         after: true,
       }],
+      'space-before-blocks': [2, 'always'],
     },
   }],
 };

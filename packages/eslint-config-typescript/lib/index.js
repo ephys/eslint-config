@@ -18,6 +18,9 @@ module.exports = {
         argsIgnorePattern: '^ignore|^_',
       }],
 
+      // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/space-before-blocks.md
+      '@typescript-eslint/space-before-blocks': ['error', 'always'],
+
       '@typescript-eslint/no-useless-constructor': 'error',
 
       '@typescript-eslint/default-param-last': 'error',
