@@ -85,6 +85,7 @@ module.exports = {
       enforceDynamicLinks: 'always',
     }],
 
+    'react/hook-use-state': 'error',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
 
