@@ -14,9 +14,9 @@
   "license": "MIT",
   "homepage": "https://github.com/ephys/eslint-config",
   "dependencies": {
-    "@ephys/eslint-config": "^14.1.0",
-    "@typescript-eslint/eslint-plugin": "^5.8.1",
-    "@typescript-eslint/parser": "^5.8.1",
+    "@ephys/eslint-config": "^15.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.14.0",
+    "@typescript-eslint/parser": "^5.14.0",
     "eslint-import-resolver-typescript": "^2.5.0"
   }
 }
