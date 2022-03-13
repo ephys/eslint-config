@@ -38,6 +38,7 @@ module.exports = {
 
     'implicit-arrow-linebreak': [2, 'beside'],
 
+    quotes: [2, 'single', { allowTemplateLiterals: true }],
     'quote-props': [2, 'as-needed', { unnecessary: true }],
 
     'arrow-parens': [2, 'as-needed'],
@@ -365,6 +366,8 @@ module.exports = {
     // Cool feature where if you use one of the following terms, you will prevent committing the file until you remove it
     'no-warning-comments': ['error', { terms: ['!todo', '!fixme'] }],
 
+    'space-before-blocks': [2, 'always'],
+
     // TODO consider:
     //  - prefer-named-capture-group
     //  - function-call-argument-newline
@@ -377,7 +380,7 @@ module.exports = {
   // these rules only run on vanilla or flow files
   // typically because they're handled differently in TypeScript
   overrides: [{
-    files: ['*.js', '*.jsx', '*.mjs'],
+    files: ['*.js', '*.jsx', '*.mjs', '*.cjs'],
     rules: {
 
       'no-undef': 2,
@@ -405,7 +408,6 @@ module.exports = {
 
       // 'no-return-await': 2,
 
-      quotes: [2, 'single', { allowTemplateLiterals: true }],
       'object-curly-spacing': [2, 'always'],
       'no-unused-expressions': [2, {
         allowShortCircuit: true,
@@ -440,7 +442,6 @@ module.exports = {
         before: true,
         after: true,
       }],
-      'space-before-blocks': [2, 'always'],
     },
   }],
 };

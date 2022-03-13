@@ -12,7 +12,6 @@ module.exports = {
       // handled by TypeScript
       'import/named': 'off',
 
-      'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': ['error', {
         varsIgnorePattern: '^ignore',
         argsIgnorePattern: '^ignore|^_',
