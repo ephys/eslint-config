@@ -1,6 +1,6 @@
 {
   "name": "@ephys/eslint-config-typescript",
-  "version": "16.0.2",
+  "version": "17.0.0",
   "description": "ESLint configuration for the foobarHQ JavaScript code style with Typescript support",
   "main": "lib/index.js",
   "scripts": {
