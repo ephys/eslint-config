@@ -192,6 +192,10 @@ module.exports = {
 
       '@typescript-eslint/prefer-return-this-type': 'error',
 
+      '@typescript-eslint/explicit-member-accessibility': ['error', {
+        accessibility: 'no-public',
+      }],
+
       // TODO: padding-line-between-statements
     },
     settings: {
