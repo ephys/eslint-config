@@ -100,7 +100,10 @@ module.exports = {
         tuples: 'always-multiline',
       }],
 
-      '@typescript-eslint/keyword-spacing': 'error',
+      '@typescript-eslint/keyword-spacing': ['error', {
+        before: true,
+        after: true,
+      }],
 
       // indent not used yet because https://github.com/typescript-eslint/typescript-eslint/issues/1824
       // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/indent.md
