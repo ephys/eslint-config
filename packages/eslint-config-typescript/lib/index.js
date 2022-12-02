@@ -150,19 +150,11 @@ module.exports = {
       '@typescript-eslint/adjacent-overload-signatures': 'error',
       '@typescript-eslint/switch-exhaustiveness-check': 'error',
       '@typescript-eslint/ban-ts-comment': ['error', {
+        // handled by prefer-ts-expect-error
+        'ts-ignore': false,
         'ts-expect-error': {
           descriptionFormat: '^ -- .+$',
         },
-      }],
-      '@typescript-eslint/strict-boolean-expressions': ['error', {
-        allowString: true,
-        allowNumber: false,
-        allowNullableObject: true,
-        allowNullableBoolean: true,
-        allowNullableString: true,
-        allowNullableNumber: false,
-        allowAny: true,
-        allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing: false,
       }],
       '@typescript-eslint/member-delimiter-style': [
         'error',
