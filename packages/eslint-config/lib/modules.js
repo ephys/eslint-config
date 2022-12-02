@@ -46,6 +46,7 @@ module.exports = {
     // ideally replace with https://github.com/import-js/eslint-plugin-import/issues/2319
     // 'import/extensions': ['error', 'ignorePackages'],
 
+    'import/no-duplicates': 2,
     'import/newline-after-import': 2,
     'import/order': ['error', {
       groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
@@ -90,15 +91,4 @@ module.exports = {
       },
     },
   },
-
-  // these rules only run on vanilla or flow files
-  // typically because they're handled differently in TypeScript
-  overrides: [{
-    files: ['*.js', '*.jsx', '*.mjs', '*.cjs'],
-    rules: {
-      // https://github.com/typescript-eslint/typescript-eslint/issues/3537
-      'import/no-duplicates': 0,
-      'no-duplicate-imports': 2,
-    },
-  }],
 };

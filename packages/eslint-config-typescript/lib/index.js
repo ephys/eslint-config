@@ -46,8 +46,6 @@ module.exports = {
 
       '@typescript-eslint/space-infix-ops': ['error', { int32Hint: true }],
 
-      // consider setting to "always"?
-      // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/return-await.md
       '@typescript-eslint/return-await': ['error', 'in-try-catch'],
 
       '@typescript-eslint/quotes': ['error', 'single', { allowTemplateLiterals: true }],
@@ -68,8 +66,6 @@ module.exports = {
       }],
 
       '@typescript-eslint/no-implied-eval': 'error',
-
-      '@typescript-eslint/no-duplicate-imports': 'error',
 
       '@typescript-eslint/no-dupe-class-members': 'error',
 
@@ -149,6 +145,22 @@ module.exports = {
       '@typescript-eslint/prefer-ts-expect-error': 'error',
       '@typescript-eslint/array-type': ['error', { default: 'array-simple' }],
       '@typescript-eslint/adjacent-overload-signatures': 'error',
+      '@typescript-eslint/switch-exhaustiveness-check': 'error',
+      '@typescript-eslint/ban-ts-comment': ['error', {
+        'ts-expect-error': {
+          descriptionFormat: '^ -- .+$',
+        },
+      }],
+      '@typescript-eslint/strict-boolean-expressions': ['error', {
+        allowString: true,
+        allowNumber: false,
+        allowNullableObject: true,
+        allowNullableBoolean: true,
+        allowNullableString: true,
+        allowNullableNumber: false,
+        allowAny: true,
+        allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing: false,
+      }],
       '@typescript-eslint/member-delimiter-style': [
         'error',
         {
@@ -182,7 +194,6 @@ module.exports = {
       // - https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unsafe-assignment.md
       // - https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unsafe-call.md
       // - https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unsafe-member-access.md
-      // - https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/strict-boolean-expressions.md
       // - https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-readonly-parameter-types.md
 
       // if an import is only used as a type, require tagging it with `type` in the import so it can be removed
