@@ -1,6 +1,6 @@
 {
   "name": "@ephys/eslint-config-typescript",
-  "version": "18.0.1",
+  "version": "19.0.0",
   "description": "ESLint configuration for the foobarHQ JavaScript code style with Typescript support",
   "main": "lib/index.js",
   "scripts": {
@@ -14,7 +14,7 @@
   "license": "MIT",
   "homepage": "https://github.com/ephys/eslint-config",
   "dependencies": {
-    "@ephys/eslint-config": "^18.0.1",
+    "@ephys/eslint-config": "^19.0.0",
     "@typescript-eslint/eslint-plugin": "^5.58.0",
     "@typescript-eslint/parser": "^5.58.0",
     "eslint-import-resolver-typescript": "^3.5.5"
