@@ -1,9 +1,7 @@
 module.exports = {
-  plugins: ['babel'],
   rules: {
     'no-empty-static-block': 'error',
     eqeqeq: [2, 'always', { null: 'ignore' }],
-    'babel/new-cap': 1,
     'semi-style': [2, 'last'],
     'comma-style': [2, 'last'],
     'generator-star-spacing': [2, 'before'],
@@ -401,7 +399,7 @@ module.exports = {
       }],
       'no-redeclare': 2,
       'no-loop-func': 2,
-      'babel/semi': [2, 'always'],
+      semi: [2, 'always'],
 
       'no-extra-semi': 2,
       'dot-notation': 2,
@@ -417,8 +415,7 @@ module.exports = {
       'no-throw-literal': 2,
       'no-loss-of-precision': 2,
 
-      'no-invalid-this': 0,
-      'babel/no-invalid-this': 2,
+      'no-invalid-this': 2,
 
       'no-implied-eval': 2,
       'no-dupe-class-members': 2,
