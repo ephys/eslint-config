@@ -1,6 +1,19 @@
 module.exports = {
-  plugins: ['import', 'small-import'],
+  plugins: ['import-newlines', 'import', 'small-import'],
   rules: {
+    'sort-imports': ['error', {
+      ignoreDeclarationSort: true,
+    }],
+
+    'import-newlines/enforce': [
+      'error',
+      {
+        items: Number.POSITIVE_INFINITY,
+        'max-len': 125,
+        semi: true,
+      },
+    ],
+
     // not ready for node 12's 'exports' yet.
     // 'import/no-unresolved': 2,
     // too slow
@@ -38,8 +51,7 @@ module.exports = {
     'import/no-commonjs': 2,
     'import/no-amd': 2,
 
-    'import/imports-first': 2,
-
+    'import/first': 2,
     'import/no-namespace': 0,
 
     // disabled because .ts files must be imported using .js
@@ -50,7 +62,7 @@ module.exports = {
     'import/no-duplicates': 2,
     'import/newline-after-import': 2,
     'import/order': ['error', {
-      groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
+      groups: ['builtin', 'external', 'internal'],
       'newlines-between': 'never',
       alphabetize: {
         order: 'asc',

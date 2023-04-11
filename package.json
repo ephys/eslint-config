@@ -7,11 +7,11 @@
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.2.0",
-    "@semantic-release/changelog": "^6.0.2",
-    "eslint": "^8.28.0",
-    "lerna": "^6.1.0",
-    "multi-semantic-release": "^3.0.1",
-    "semantic-release": "^19.0.5"
+    "@semantic-release/changelog": "^6.0.3",
+    "eslint": "^8.38.0",
+    "lerna": "^6.6.1",
+    "multi-semantic-release": "^3.0.2",
+    "semantic-release": "^21.0.1"
   },
   "name": "eslint-config",
   "workspaces": [

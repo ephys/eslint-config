@@ -1,6 +1,7 @@
 module.exports = {
   plugins: ['babel'],
   rules: {
+    'no-empty-static-block': 'error',
     eqeqeq: [2, 'always', { null: 'ignore' }],
     'babel/new-cap': 1,
     'semi-style': [2, 'last'],

@@ -11,6 +11,7 @@ module.exports = {
     rules: {
       // handled by TypeScript
       'import/named': 'off',
+      'consistent-return': 'off',
 
       '@typescript-eslint/no-unused-vars': ['error', {
         varsIgnorePattern: '^ignore',
@@ -101,6 +102,16 @@ module.exports = {
         after: true,
       }],
 
+      'key-spacing': 'off',
+      '@typescript-eslint/key-spacing': ['error', {
+        beforeColon: false,
+        afterColon: true,
+        mode: 'strict',
+      }],
+
+      'block-spacing': 'off',
+      '@typescript-eslint/block-spacing': ['error', 'always'],
+
       // indent not used yet because https://github.com/typescript-eslint/typescript-eslint/issues/1824
       // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/indent.md
 
@@ -148,7 +159,10 @@ module.exports = {
       '@typescript-eslint/prefer-ts-expect-error': 'error',
       '@typescript-eslint/array-type': ['error', { default: 'array-simple' }],
       '@typescript-eslint/adjacent-overload-signatures': 'error',
+
+      'default-case': 'off',
       '@typescript-eslint/switch-exhaustiveness-check': 'error',
+
       '@typescript-eslint/ban-ts-comment': ['error', {
         // handled by prefer-ts-expect-error
         'ts-ignore': false,

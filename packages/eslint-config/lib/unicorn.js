@@ -86,18 +86,16 @@ module.exports = {
     'unicorn/prefer-query-selector': 'error',
     'unicorn/prefer-reflect-apply': 'error',
     'unicorn/prefer-regexp-test': 'error',
-    'unicorn/prefer-set-has': 'error',
+    // 'unicorn/prefer-set-has': 'error',
     'unicorn/prefer-spread': 'error',
     'unicorn/prefer-string-replace-all': 'error',
     'unicorn/prefer-string-slice': 'error',
     'unicorn/prefer-string-starts-ends-with': 'error',
     'unicorn/prefer-string-trim-start-end': 'error',
     // too opinionated
+    // 'unicorn/prefer-type-error': 'error',
     // 'unicorn/prefer-switch': 'error',
     // 'unicorn/prefer-ternary': 'error',
-
-    'unicorn/prefer-type-error': 'error',
-    // Too opinionated
     // 'unicorn/prevent-abbreviations': 'off',
     'unicorn/relative-url-style': ['error', 'always'],
     'unicorn/require-array-join-separator': 'error',
