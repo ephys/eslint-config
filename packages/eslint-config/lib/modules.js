@@ -62,7 +62,7 @@ module.exports = {
     'import/no-duplicates': 2,
     'import/newline-after-import': 2,
     'import/order': ['error', {
-      groups: ['builtin', 'external', 'internal'],
+      groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
       'newlines-between': 'never',
       alphabetize: {
         order: 'asc',
