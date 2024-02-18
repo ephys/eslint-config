@@ -7,6 +7,11 @@ module.exports = {
     // eslint-comments/no-unlimited-disable is part of unicorn plugin
     // eslint-comments/no-unused-disable is --report-unused-disable-directives
     'eslint-comments/no-unused-enable': 'error',
-    'eslint-comments/require-description': 'error',
+    'eslint-comments/require-description': [
+      'error',
+      {
+        ignore: ['eslint-enable'],
+      },
+    ],
   },
 };

@@ -8,11 +8,6 @@ module.exports = {
     }],
     'default-case-last': 2,
 
-    'switch-colon-spacing': [2, {
-      after: true,
-      before: false,
-    }],
-
     'no-fallthrough': [2, { commentPattern: 'fallthrough' }],
   },
 };

@@ -1,4 +1,7 @@
-const { cjsRules, esmRules } = require('./commonjs-rules');
+const {
+  cjsRules,
+  esmRules,
+} = require('./commonjs-rules');
 
 module.exports = {
   parser: '@babel/eslint-parser',

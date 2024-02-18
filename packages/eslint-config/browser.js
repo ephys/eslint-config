@@ -8,4 +8,10 @@ module.exports = {
   env: {
     browser: true,
   },
+  rules: {
+    /**
+     * alert is intended to be used for debugging during development
+     */
+    'no-alert': 'error',
+  }
 };

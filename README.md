@@ -2,6 +2,10 @@
 
 Custom-built ESLint configuration designed for use in ESM, CJS, TypeScript, Vanilla JS, React & Node.
 
+This preset includes some stylistic rules, but it's mostly focused on catching bugs and enforcing best practices.
+Any rule that conflicts with Prettier are not included.
+This preset is designed to be used with Prettier and `prettier-plugin-organize-imports`.
+
 ## Usage
 
 - Install using `npm i -D @ephys/eslint-config` or `npm i -D @ephys/eslint-config-typescript`

@@ -1,106 +1,437 @@
 module.exports = {
+  plugins: ['eslint-plugin-sort-destructure-keys'],
   rules: {
-    'no-empty-static-block': 'error',
-    eqeqeq: [2, 'always', { null: 'ignore' }],
-    'semi-style': [2, 'last'],
-    'comma-style': [2, 'last'],
-    'generator-star-spacing': [2, 'before'],
-    'yield-star-spacing': [2, {
-      before: false,
-      after: true,
-    }],
-    'array-bracket-spacing': [2, 'never'],
-    'object-curly-newline': [2, {
-      multiline: true,
-      consistent: true,
-    }],
-
-    // 'object-property-newline': [2, {
-    //
-    // }],
-    'template-tag-spacing': [2, 'never'],
-    'computed-property-spacing': [2, 'never'],
-    'key-spacing': [2, {
-      beforeColon: false,
-      afterColon: true,
-      mode: 'strict',
-    }],
-    'semi-spacing': [2, {
-      before: false,
-      after: true,
-    }],
-    'arrow-spacing': [2, {
-      before: true,
-      after: true,
-    }],
-    'rest-spread-spacing': [2, 'never'],
-
-    'implicit-arrow-linebreak': [2, 'beside'],
-
-    quotes: [2, 'single', { allowTemplateLiterals: true }],
-    'quote-props': [2, 'as-needed', { unnecessary: true }],
-
-    'arrow-parens': [2, 'as-needed'],
-
-    'function-paren-newline': [2, 'consistent'],
-
-    // 'no-extra-parens': [2, 'all', { ignoreJSX: 'multi-line' }],
-    // disabled because parens sometimes make things clearer.
-    'no-extra-parens': 0,
-
-    'object-shorthand': [2, 'always'],
-
+    'array-callback-return': ['error', { allowImplicit: true }],
     'arrow-body-style': [0, 'as-needed', { requireReturnForObjectLiteral: false }],
-    'prefer-arrow-callback': 2,
-    indent: ['error', 2, {
-      ignoredNodes: ['ConditionalExpression'],
-      SwitchCase: 1,
-    }],
 
-    'max-depth': [2, 4],
-    'max-len': [2, {
-      code: 125,
-      ignoreUrls: true,
-      ignoreStrings: true,
-      ignoreTemplateLiterals: true,
-      ignoreComments: true,
-      ignoreRegExpLiterals: true,
+    'consistent-return': ['error', { treatUndefinedAsUnspecified: true }],
+    'consistent-this': ['error', 'that'],
+    'constructor-super': 'error',
+    curly: 'error',
 
-      ignorePattern: '^\\s*import',
-    }],
-    'max-statements-per-line': [2, { max: 1 }],
+    eqeqeq: ['error', 'always', { null: 'ignore' }],
 
-    'newline-per-chained-call': [2, { ignoreChainWithDepth: 3 }],
-    // people are still allowed (and encouraged!) to use console.log while debugging,
-    // this rule is here to remind them to remove it once they're done.
-    // using something else than "console.log" is treated as an intentional logging that can be published.
+    'func-names': ['error', 'always'],
+    'getter-return': 'error',
+
+    'grouped-accessor-pairs': ['error', 'anyOrder'],
+
+    'logical-assignment-operators': ['error', 'always'],
+    'max-depth': ['error', 4],
+
+    'new-parens': 'error',
+    'no-async-promise-executor': 'error',
+    'no-await-in-loop': 'error',
+
+    'no-caller': 'error',
+    'no-class-assign': 'error',
+
+    'no-compare-neg-zero': 'error',
+
+    'no-cond-assign': ['error', 'except-parens'],
+    'no-confusing-arrow': 'error',
+
     'no-console': ['error', {
       allow: ['debug', 'info', 'warn', 'error'],
     }],
 
-    // too often, this rule gets in the way.
-    // 'no-use-before-define': [2, { functions: false }],
-    'template-curly-spacing': [2, 'never'],
-    'prefer-template': 2,
-    'no-multi-str': 2,
+    'no-const-assign': 'error',
 
-    'padded-blocks': 0,
+    'no-constant-condition': 'error',
+    'no-constructor-return': 'error',
 
-    'require-yield': 1,
+    'no-debugger': 'error',
+    'no-delete-var': 'error',
+    'no-dupe-args': 'error',
+    'no-dupe-else-if': 'error',
+    'no-dupe-keys': 'error',
+    'no-else-return': 'error',
 
-    'no-void': 0,
-    'no-undefined': 0, // allow using 'undefined'
+    'no-empty': 'error',
 
-    // Use private fields proposal (#)
-    // TODO: enable when private fields are available everywhere
-    'no-underscore-dangle': 0,
+    'no-empty-pattern': 'error',
+    'no-empty-static-block': 'error',
+    'no-eval': 'error',
 
-    'no-param-reassign': 0,
-    'consistent-return': [2, { treatUndefinedAsUnspecified: true }],
-    'consistent-this': [2, 'that'],
-    'no-continue': 0,
+    'no-ex-assign': 'error',
+    'no-extend-native': 'error',
+    'no-extra-bind': 'error',
+    'no-extra-boolean-cast': 'error',
+    'no-floating-decimal': 'error',
+    'no-func-assign': 'error',
+    'no-global-assign': 'error',
+    'no-implicit-coercion': ['error', {
+      boolean: true,
+      number: true,
+      string: true,
+    }],
+    'no-implicit-globals': 'error',
+    'no-inner-declarations': 'error',
+    'no-irregular-whitespace': 'error',
 
-    'spaced-comment': [2, 'always', {
+    'no-iterator': 'error',
+    'no-labels': 'error',
+    'no-lone-blocks': 'error',
+    'no-lonely-if': 'error',
+    'no-multi-assign': 'error',
+    'no-multi-str': 'error',
+    'no-multiple-empty-lines': ['error', { max: 1 }],
+    'no-new-func': 'error',
+    'no-new-object': 'error',
+    'no-new-symbol': 'error',
+    'no-new-wrappers': 'error',
+    'no-obj-calls': 'error',
+    'no-octal': 'error',
+    'no-octal-escape': 'error',
+    'no-promise-executor-return': 'error',
+    'no-proto': 'error',
+    'no-prototype-builtins': 'error',
+    'no-restricted-globals': ['error',
+      // commonly named local variable
+      ...commonlyNamedGlobals(['name', 'location', 'history', 'blur', 'caches', 'close', 'closed',
+        'content', 'devicePixelRatio', 'focus', 'find', 'external', 'frames', 'fullScreen', 'innerHeight', 'innerWidth',
+        'length', 'isSecureContext', 'opener', 'origin', 'outerHeight', 'outerWidth', 'parent', 'print',
+        'resizeBy', 'resizeTo', 'screen', 'screenLeft', 'screenTop', 'screenX', 'screenY', 'scroll',
+        'scrollBy', 'scrollByLines', 'scrollByPages', 'scrollMaxX', 'scrollMaxY', 'scrollX', 'scrollY',
+        'scrollbars', 'sidebar', 'sizeToContent', 'speechSynthesis', 'status', 'statusbar', 'stop', 'toolbar', 'top', 'u2f',
+        'updateCommands', 'visualViewport', 'event']),
+      {
+        name: 'parseInt',
+        message: 'Use parseSafeInteger from @sequelize/utils',
+      },
+      {
+        name: 'parseFloat',
+        message: 'Use parseNumber from @sequelize/utils',
+      },
+      {
+        name: 'isNaN',
+        message: 'Use Number.isNaN',
+      },
+      {
+        name: 'isFinite',
+        message: 'Use Number.isFinite',
+      },
+    ],
+    'no-restricted-imports': ['error', {
+      paths: ['decko'],
+      patterns: [
+        {
+          group: ['lodash.*'],
+          message: 'use lodash/* instead',
+        },
+        {
+          /**
+           * We're adding * at the end to match both:
+           * - lodash/isUndefined
+           * - lodash/isUndefined.js
+           */
+          group: ['lodash/isUndefined*'],
+          message: `Use '=== undefined' instead (preferred), or use isUndefined from @sequelize/utils`,
+        },
+        {
+          group: ['lodash/isNull*'],
+          message: `Use '=== null' instead (preferred), or use isNull from @sequelize/utils`,
+        },
+        {
+          group: [
+            'lodash/isArray*',
+            'lodash/isFinite*',
+            'lodash/isNaN*',
+            'lodash/isSafeInteger*',
+            'lodash/isInteger*',
+          ],
+          message: 'Use the native method instead',
+        },
+        {
+          group: [
+            'lodash/parseInt*',
+            'lodash/parseFloat*',
+            'lodash/toInteger*',
+            'lodash/toSafeInteger*',
+            'lodash/toNumber*',
+          ],
+          message:
+            'This number parsing method is unreliable, use parseNumber, parseSafeInteger, or parseBigInt functions from @sequelize/utils instead',
+        },
+        {
+          group: [
+            'lodash/isBoolean*',
+            'lodash/isDate*',
+            'lodash/isError*',
+            'lodash/isFunction*',
+            'lodash/isNumber*',
+            'lodash/isPlainObject*',
+            'lodash/isString*',
+            'lodash/isSymbol*',
+          ],
+          message: `Use one of the isType methods from the @sequelize/utils package instead`,
+        },
+        {
+          group: ['lodash/isNil*'],
+          message: `Use isNullish from the @sequelize/utils package instead`,
+        },
+        {
+          group: ['lodash/isObject*'],
+          message: `Use isAnyObject from the @sequelize/utils package instead`,
+        },
+        {
+          group: ['lodash/omit', 'lodash/omit.js'],
+          message: 'Use omit from the @sequelize/utils package instead.',
+        },
+        {
+          group: ['lodash/omitBy*'],
+          message: 'Use omitByValue from the @sequelize/utils package instead if possible.',
+        },
+        {
+          group: ['lodash/pick', 'lodash/pick.js'],
+          message: 'Use pick from the @sequelize/utils package instead.',
+        },
+        {
+          group: ['node:assert', 'node:assert/*'],
+          message: 'Please use assert from @sequelize/utils, as it works in all envs',
+        },
+      ],
+    }],
+    'no-restricted-syntax': ['error',
+      'ForInStatement',
+      'WithStatement',
+      'EmptyStatement',
+
+      {
+        selector:
+          'CallExpression[callee.object.name=document] > Identifier.property[name=/^getElementsBy/]',
+        message:
+          'Prefer document.querySelectorAll instead of document.getElementsByX, as the latter returns a live list (getElementById is allowed).',
+      },
+      {
+        selector: `UnaryExpression[operator='typeof']`,
+        message: `Do not use 'typeof'. Use one of the isType helpers (isString, isPlainObject, etc…) from @sequelize/utils instead.
+Trying to check whether a global exists? Use 'globalThis.<globalName>'`,
+      },
+      /** Forbid TypeScript's private in favor of EcmaScript's private */
+      /** This rule is disabled because some places do not support native private due to being used in proxies */
+      {
+        /**
+         * PropertyDefinition: Class properties
+         * MethodDefinition: Class method
+         * TSParameterProperty: TypeScript's Parameter Property (constructor variables that automatically create properties)
+         */
+        selector:
+          ':matches(PropertyDefinition, MethodDefinition:not(:has(.key[name="constructor"])),TSParameterProperty)[accessibility="private"]',
+        message:
+          'Use native private class features instead: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields',
+      },
+
+      /**
+       * 'void 0' is forbidden. Use 'undefined' instead.
+       * 'void' can still be used to discard the output of a function.
+       */
+      {
+        selector: `UnaryExpression[operator='void'][argument.type != 'CallExpression']`,
+        message:
+          'The "void x" operator is banned, unless it is used to discard the result of a function call. Use "undefined" instead.',
+      },
+
+      {
+        selector: `CallExpression[callee.name='Number']`,
+        message:
+          'Number() is an unreliable way to parse numbers, use parseNumber, parseSafeInteger, or parseBigInt from @sequelize/utils instead.',
+      },
+      {
+        selector: `CallExpression[callee.object.name='Number'][callee.property.name='parseInt']`,
+        message:
+          'Number.parseInt() is an unreliable way to parse numbers, use parseSafeInteger from @sequelize/utils instead.',
+      },
+      {
+        selector: `CallExpression[callee.object.name='Number'][callee.property.name='parseFloat']`,
+        message:
+          'Number.parseFloat() is an unreliable way to parse numbers, use parseNumber from @sequelize/utils instead.',
+      },
+
+      {
+        selector: `CallExpression[callee.name='BigInt']`,
+        message:
+          'BigInt() is an unreliable way to parse numbers, use parseBigInt from @sequelize/utils instead.',
+      },
+
+      {
+        selector: `UnaryExpression[operator="!"] > CallExpression[callee.name=/isNot[A-Z].*/]`,
+        message: 'Avoid double negations: !isNotXxx() is not allowed, use isXxx() instead',
+      },
+
+      {
+        selector: `CallExpression[callee.object.name='Object'][callee.property.name='create'] > Literal[raw='null']`,
+        message: 'Prefer pojo() to Object.create(null).',
+      },
+      {
+        selector: 'ObjectExpression:not(:has(Property)):not(:has(SpreadElement))',
+        message: `Objects created by the object literal ({}) inherit from Object.prototype, which includes harmful properties like __proto__ and are unsuitable as maps.
+Here are your alternatives:
+- pojo(): Creates an empty POJO without prototype. (@sequelize/utils)
+- pojo({ /* properties */ }): Removes the prototype of the input. (@sequelize/utils)
+- EMPTY_OBJECT: Is a constant, immutable, empty POJO without prototype. (@sequelize/utils)
+- frozenDictionary({ /* properties */ }): Same as above, but shallow freezes. (@sequelize/utils)
+- new Map(): A safe alternative to POJOs, but with worse ergonomics.`,
+      },
+      {
+        selector: `CallExpression[callee.object.name='Date'][callee.property.name='parse']`,
+        message: `Parsing a Date using "Date.parse()" is unreliable.
+Here are your alternatives:
+- If you need to parse a DateTimeOffset string or number as a timestamp, use parseIsoTimestamp.
+- If you need to parse a DateTimeLocal string as a timestamp, use parseIsoTimestampLocal.`,
+      },
+      {
+        selector: `NewExpression[callee.name='Date'][arguments.length>0]`,
+        message: `Parsing a Date using "new Date()" is unreliable.
+Here are your alternatives:
+- If you need to clone a Date object, use cloneDate
+- If you need to parse a DateTimeOffset string or number as a Date, use parseIsoDateTime.
+- If you need to parse a DateTimeLocal string as a Date, use parseIsoDateTimeLocal.
+- If you need to parse a DateOnly string as a Date, use parseIsoDateOnly.
+Note that "new Date()" without arguments is still allowed to get the current DateTimeOffset.`,
+      },
+      {
+        selector:
+          'CallExpression[callee.property.name=/^toLocale/][arguments.length=0] > .callee > .property',
+        message: 'Always specify the locale to use when using toLocaleX methods.',
+      },
+      {
+        selector:
+          'AwaitExpression > CallExpression > MemberExpression.callee > Identifier.property:matches([name="finally"], [name="then"], [name="catch"])',
+        message:
+          'Do not use .then, .catch, or .finally on something that is already awaited. Prefer using try..catch..finally blocks instead. We use .catch as a way to tell eslint that the promise does not need to be awaited.',
+      },
+      {
+        selector:
+          'CallExpression[callee.property.name="catch"] > ArrowFunctionExpression.arguments > Identifier:not(:has(TSUnknownKeyword))',
+        message: '.catch is incorrectly typed as any. Type it explicitly as unknown instead.',
+      },
+    ],
+    'no-return-assign': ['error', 'except-parens'],
+    'no-self-assign': 'error',
+    'no-self-compare': 'error',
+    'no-sequences': 'error',
+    'no-setter-return': 'error',
+    'no-sparse-arrays': 'error',
+    'no-this-before-super': 'error',
+    'no-unexpected-multiline': 'error',
+    'no-unmodified-loop-condition': 'error',
+    'no-unneeded-ternary': 'error',
+    'no-unreachable': 'error',
+    'no-unreachable-loop': 'error',
+    'no-unsafe-finally': 'error',
+    'no-unsafe-negation': ['error', {
+      enforceForOrderingRelations: true,
+    }],
+    'no-useless-call': 'error',
+    'no-useless-catch': 'error',
+    'no-useless-computed-key': 'error',
+    'no-useless-concat': 'error',
+    'no-useless-escape': 'error',
+    'no-useless-rename': 'error',
+    'no-useless-return': 'error',
+    'no-var': 'error',
+    'no-warning-comments': ['error', { terms: ['!todo', '!fixme'] }],
+    'no-with': 'error',
+    'object-shorthand': ['error', 'always'],
+    'one-var': ['error', 'never'],
+    'padding-line-between-statements': [
+      2,
+      // always a space between `break;` and `case` statements
+      {
+        blankLine: 'always',
+        prev: 'break',
+        next: 'case',
+      },
+
+      // always a space before return, but not enforced after blocks
+      {
+        blankLine: 'always',
+        prev: '*',
+        next: 'return',
+      },
+      {
+        blankLine: 'any',
+        prev: 'block-like',
+        next: 'return',
+      },
+
+      // never a space after a return
+      {
+        blankLine: 'never',
+        prev: 'return',
+        next: '*',
+      },
+
+      // always a space before around declarations
+      {
+        blankLine: 'always',
+        prev: '*',
+        next: 'class',
+      },
+      {
+        blankLine: 'always',
+        prev: 'class',
+        next: '*',
+      },
+
+      // always have a space around function declarations
+      {
+        blankLine: 'always',
+        prev: '*',
+        next: 'function',
+      },
+      {
+        blankLine: 'always',
+        prev: 'function',
+        next: '*',
+      },
+
+      // always a space after blocks
+      {
+        blankLine: 'always',
+        prev: 'block-like',
+        next: '*',
+      },
+
+      // always a space after import groups
+      {
+        blankLine: 'always',
+        prev: 'import',
+        next: '*',
+      },
+      {
+        blankLine: 'any',
+        prev: 'import',
+        next: 'import',
+      },
+
+      // always a space after directive groups
+      {
+        blankLine: 'always',
+        prev: 'directive',
+        next: '*',
+      },
+      {
+        blankLine: 'any',
+        prev: 'directive',
+        next: 'directive',
+      },
+    ],
+    'prefer-arrow-callback': 'error',
+    'prefer-const': ['error', {
+      destructuring: 'all',
+    }],
+    'prefer-numeric-literals': 'error',
+    'prefer-object-has-own': 'error',
+    'prefer-promise-reject-errors': 'error',
+    'prefer-regex-literals': 'error',
+    'prefer-rest-params': 'error',
+    'prefer-spread': 'error',
+    'prefer-template': 'error',
+    radix: ['error', 'always'],
+
+    'spaced-comment': ['error', 'always', {
       line: {
         exceptions: ['-', '+'],
         markers: ['=', '!'],
@@ -111,265 +442,13 @@ module.exports = {
         balanced: true,
       },
     }],
-    'line-comment-position': 0,
-    'lines-around-comment': 0,
-    // 'lines-around-comment': [2, {
-    //   beforeBlockComment: true,
-    //   beforeLineComment: true,
-    //   allowBlockStart: true,
-    //   allowArrayStart: true,
-    //   allowObjectStart: true,
-    //   allowClassStart: true,
-    // }],
-    'no-plusplus': 0,
+    'symbol-description': 'error',
+    'unicode-bom': 'error',
+    'use-isnan': 'error',
 
-    'no-extra-bind': 2,
+    'valid-typeof': 'error',
 
-    // 'no-extra-label': 2,
-    // 'no-label-var': 2,
-    'no-labels': 2,
-    'no-lone-blocks': 2,
-
-    // not actual iterators, only spidermonkey's
-    'no-iterator': 2,
-
-    'no-implicit-coercion': [2, {
-      boolean: true,
-      number: true,
-      string: true,
-    }],
-
-    curly: 2,
-    'no-bitwise': 0,
-
-    'no-mixed-operators': 0,
-    'operator-linebreak': [2, 'before'],
-    'new-cap': 0,
-    'new-parens': 2,
-    'eol-last': [2, 'always'],
-    'linebreak-style': [2, 'unix'],
-    'no-return-assign': [2, 'except-parens'],
-    'no-else-return': 2,
-    'no-dupe-else-if': 2,
-    'no-lonely-if': 2,
-
-    'no-restricted-imports': [2, {
-      paths: ['decko'],
-      patterns: ['lodash.*'],
-    }],
-
-    // Should we use a specific order? set first? get first?
-    'grouped-accessor-pairs': [2, 'anyOrder'], // get() and set() must be grouped together if both are defined
-    'getter-return': 2,
-    'no-setter-return': 2,
-
-    'class-methods-use-this': 0,
-    // Rule is harmful as it ignores methods that return a promise (no await), and throw exceptions - https://github.com/eslint/eslint/issues/10000
-    'require-await': 0,
-    'no-await-in-loop': 2,
-    'prefer-promise-reject-errors': 2,
-    'no-promise-executor-return': 2,
-    'no-async-promise-executor': 2,
-    'no-extra-boolean-cast': 2,
-    'prefer-numeric-literals': 2,
-    'symbol-description': 2,
-    'no-unsafe-negation': [2, {
-      enforceForOrderingRelations: true,
-    }],
-    'no-restricted-syntax': [2,
-      'ForInStatement',
-      'WithStatement',
-      'EmptyStatement',
-    ],
-
-    'no-compare-neg-zero': 2,
-    'no-cond-assign': [2, 'except-parens'],
-    'no-ex-assign': 2,
-    'no-func-assign': 2,
-    'no-class-assign': 2,
-    'no-const-assign': 2,
-    'no-constant-condition': 2,
-    'no-debugger': 2,
-    'no-dupe-args': 2,
-    'no-dupe-keys': 2,
-    'no-useless-computed-key': 2,
-    'no-empty': 2,
-    'no-inner-declarations': 2,
-    'no-irregular-whitespace': 2,
-    'no-obj-calls': 2,
-    'no-prototype-builtins': 2,
-    'no-proto': 2,
-    'no-sparse-arrays': 2,
-    'use-isnan': 2,
-    'valid-typeof': 2,
-    'array-callback-return': [2, { allowImplicit: true }],
-    'dot-location': [2, 'property'],
-    'no-caller': 2,
-    'no-implicit-globals': 2,
-    'no-self-assign': 2,
-    'no-unexpected-multiline': 2,
-    'no-unreachable': 2,
-    'no-unsafe-finally': 2,
-    'no-empty-pattern': 2,
-    'no-eval': 2,
-    'no-extend-native': 2,
-    'no-floating-decimal': 2,
-    'no-global-assign': 2,
-    'no-multi-spaces': 2,
-    'no-new': 0,
-    'no-new-func': 2,
-    'no-new-wrappers': 2,
-    'no-new-symbol': 2,
-    'no-new-object': 2,
-    'no-octal': 2,
-    'no-octal-escape': 2,
-    'no-self-compare': 2,
-    'no-sequences': 2,
-    'no-unmodified-loop-condition': 2,
-    'no-unreachable-loop': 2,
-    'no-useless-call': 2,
-    'no-useless-concat': 2,
-    'no-useless-escape': 2,
-    'no-useless-return': 2,
-    'no-with': 2,
-    radix: [2, 'always'],
-    'wrap-iife': [2, 'outside', { functionPrototypeMethods: true }],
-    yoda: [2, 'never', { exceptRange: true }],
-    'no-delete-var': 2,
-    'no-mixed-spaces-and-tabs': 2,
-    'no-trailing-spaces': 2,
-    'no-tabs': 2,
-    'no-multi-assign': 2,
-    'no-whitespace-before-property': 2,
-    'no-var': 2,
-    'prefer-const': [2, {
-      destructuring: 'all',
-    }],
-    'prefer-rest-params': 2,
-    'prefer-spread': 2,
-    'prefer-object-has-own': 2,
-    'no-restricted-globals': [2,
-      {
-        name: 'event',
-        message: 'Use local parameter instead.',
-      },
-      {
-        name: 'fdescribe',
-        message: 'Do not commit fdescribe. Use describe instead.',
-      },
-      // commonly named local variable
-      ...commonlyNamedGlobals(['name', 'location', 'history', 'blur', 'caches', 'close', 'closed',
-        'content', 'devicePixelRatio', 'focus', 'find', 'external', 'frames', 'fullScreen', 'innerHeight', 'innerWidth',
-        'length', 'isSecureContext', 'opener', 'origin', 'outerHeight', 'outerWidth', 'parent', 'print',
-        'resizeBy', 'resizeTo', 'screen', 'screenLeft', 'screenTop', 'screenX', 'screenY', 'scroll',
-        'scrollBy', 'scrollByLines', 'scrollByPages', 'scrollMaxX', 'scrollMaxY', 'scrollX', 'scrollY',
-        'scrollbars', 'sidebar', 'sizeToContent', 'speechSynthesis', 'status', 'statusbar', 'stop', 'toolbar', 'top', 'u2f',
-        'updateCommands', 'visualViewport']),
-      {
-        name: 'parseInt',
-        message: 'Use Number.parseInt',
-      },
-      {
-        name: 'parseFloat',
-        message: 'Use Number.parseFloat',
-      },
-      {
-        name: 'isNaN',
-        message: 'Use Number.isNaN',
-      },
-      {
-        name: 'isFinite',
-        message: 'Use Number.isFinite',
-      },
-      {
-        name: 'NaN',
-        message: 'Use Number.NaN',
-      },
-      {
-        name: 'Infinity',
-        message: 'Use Number.POSITIVE_INFINITY or Number.NEGATIVE_INFINITY',
-      },
-    ],
-    'func-names': [2, 'always'],
-    'no-unneeded-ternary': 2,
-    'one-var': [2, 'never'],
-    'unicode-bom': 2,
-    'no-constructor-return': 2,
-    'constructor-super': 2,
-    'no-this-before-super': 2,
-    'no-useless-rename': 2,
-
-    // one-var-declaration-per-line
-
-    // 'multiline-ternary': [2, 'always-multiline'],
-    // 'nonblock-statement-body-position': [2, 'besides'],
-
-    // 'array-element-newline': [2, {
-    // multiline: true,
-    // minItems: 2,
-    // }],
-
-    // 'array-bracket-newline': [2, {
-    //   multiline: true,
-    // minItems: 2,
-    // }],
-
-    'no-multiple-empty-lines': [2, { max: 1 }],
-    'block-spacing': [2, 'always'],
-    camelcase: [2, {
-      properties: 'never',
-      allow: ['^TEST_', '^UNSAFE_'],
-    }],
-    'space-in-parens': [2, 'never'],
-    'space-unary-ops': [2, {
-      words: true,
-      nonwords: false,
-    }],
-    'no-useless-catch': 'error',
-    'no-confusing-arrow': 'error',
-    'prefer-regex-literals': 2,
-
-    // http://eslint.org/docs/rules/padding-line-between-statements
-    'padding-line-between-statements': [
-      2,
-      // always a space between `break;` and `case` statements
-      { blankLine: 'always', prev: 'break', next: 'case' },
-
-      // always a space before return, but not enforced after blocks
-      { blankLine: 'always', prev: '*', next: 'return' },
-      { blankLine: 'any', prev: 'block-like', next: 'return' },
-
-      // never a space after a return
-      { blankLine: 'never', prev: 'return', next: '*' },
-
-      // always a space before around declarations
-      { blankLine: 'always', prev: '*', next: 'class' },
-      { blankLine: 'always', prev: 'class', next: '*' },
-
-      // always have a space around function declarations
-      { blankLine: 'always', prev: '*', next: 'function' },
-      { blankLine: 'always', prev: 'function', next: '*' },
-
-      // always a space after blocks
-      { blankLine: 'always', prev: 'block-like', next: '*' },
-
-      // always a space after import groups
-      { blankLine: 'always', prev: 'import', next: '*' },
-      { blankLine: 'any', prev: 'import', next: 'import' },
-
-      // always a space after directive groups
-      { blankLine: 'always', prev: 'directive', next: '*' },
-      { blankLine: 'any', prev: 'directive', next: 'directive' },
-    ],
-
-    // Cool feature where if you use one of the following terms, you will prevent committing the file until you remove it
-    'no-warning-comments': ['error', { terms: ['!todo', '!fixme'] }],
-
-    'space-before-blocks': [2, 'always'],
-
-    // TODO consider:
-    //  - prefer-named-capture-group
-    //  - function-call-argument-newline
+    yoda: ['error', 'never', { exceptRange: true }],
   },
 
   globals: {
@@ -382,64 +461,38 @@ module.exports = {
     files: ['*.js', '*.jsx', '*.mjs', '*.cjs'],
     rules: {
 
-      'no-undef': 2,
-      'no-unused-vars': [2, {
+      'no-undef': 'error',
+      'no-unused-vars': ['error', {
         varsIgnorePattern: '^ignore',
         argsIgnorePattern: '^ignore|^_',
       }],
-      'no-useless-constructor': 2,
+      'no-useless-constructor': 'error',
       'default-param-last': 'error',
-      'space-before-function-paren': [2, {
-        anonymous: 'always',
-        named: 'never',
-        asyncArrow: 'always',
-      }],
-      'no-shadow': [2, {
+      'no-shadow': ['error', {
         allow: ['i', 'j', 'k', 'l'],
       }],
-      'no-redeclare': 2,
-      'no-loop-func': 2,
-      semi: [2, 'always'],
+      'no-redeclare': 'error',
+      'no-loop-func': 'error',
 
-      'no-extra-semi': 2,
-      'dot-notation': 2,
-      'space-infix-ops': 2,
+      'dot-notation': 'error',
 
-      // 'no-return-await': 2,
-
-      'object-curly-spacing': [2, 'always'],
-      'no-unused-expressions': [2, {
+      'no-unused-expressions': ['error', {
         allowShortCircuit: true,
         allowTernary: true,
       }],
-      'no-throw-literal': 2,
-      'no-loss-of-precision': 2,
+      'no-throw-literal': 'error',
+      'no-loss-of-precision': 'error',
 
-      'no-invalid-this': 2,
+      'no-invalid-this': 'error',
 
-      'no-implied-eval': 2,
-      'no-dupe-class-members': 2,
-      'no-array-constructor': 2,
-      'lines-between-class-members': [2, 'always', {
+      'no-implied-eval': 'error',
+      'no-dupe-class-members': 'error',
+      'no-array-constructor': 'error',
+      'lines-between-class-members': ['error', 'always', {
         exceptAfterSingleLine: true,
       }],
-      'func-call-spacing': [2, 'never'],
-      'comma-spacing': [2, {
-        after: true,
-        before: false,
-      }],
-      'brace-style': [2, '1tbs'],
-      'comma-dangle': [2, {
-        arrays: 'always-multiline',
-        objects: 'always-multiline',
-        imports: 'always-multiline',
-        exports: 'always-multiline',
-        functions: 'always-multiline',
-      }],
-      'keyword-spacing': [2, {
-        before: true,
-        after: true,
-      }],
+
+      'sort-destructure-keys/sort-destructure-keys': ['error', { caseSensitive: false }],
     },
   }],
 };
