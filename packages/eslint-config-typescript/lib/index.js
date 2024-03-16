@@ -188,9 +188,7 @@ module.exports = {
       '@typescript-eslint/require-array-sort-compare': ['error', {
         ignoreStringArrays: true,
       }],
-      '@typescript-eslint/restrict-plus-operands': ['error', {
-        checkCompoundAssignments: true,
-      }],
+      '@typescript-eslint/restrict-plus-operands': 'error',
 
       '@typescript-eslint/return-await': ['error', 'in-try-catch'],
       '@typescript-eslint/semi': ['error', 'always'],
@@ -220,6 +218,7 @@ module.exports = {
         '@babel/eslint-parser': ['.js', '.jsx', '.mjs'],
       },
       'import/resolver': {
+        // eslint-disable-next-line no-restricted-syntax -- lib is not available
         'eslint-import-resolver-typescript': {},
       },
     },
