@@ -36,10 +36,6 @@ module.exports = {
         rambda: '/src/',
       },
     }],
-
-    'sort-imports': ['error', {
-      ignoreDeclarationSort: true,
-    }],
   },
   settings: {
     'import/resolver': {
