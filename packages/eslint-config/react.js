@@ -18,7 +18,6 @@ module.exports = {
     'react/require-render-return': 2,
     'react/self-closing-comp': 2,
 
-    'react/jsx-closing-bracket-location': [2, 'line-aligned'],
     'react/jsx-closing-tag-location': 2,
     'react/no-redundant-should-component-update': 2,
     'react/default-props-match-prop-types': 0,

@@ -200,7 +200,7 @@ module.exports = {
       }],
       '@typescript-eslint/space-infix-ops': ['error', { int32Hint: true }],
       '@typescript-eslint/switch-exhaustiveness-check': 'error',
-      '@typescript-eslint/no-unnecessary-condition': 'error',
+      '@typescript-eslint/no-unnecessary-condition': ['error', { allowConstantLoopConditions: true }],
 
       '@typescript-eslint/type-annotation-spacing': 'error',
       '@typescript-eslint/unbound-method': 'error',

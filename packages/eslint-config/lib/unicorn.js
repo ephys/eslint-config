@@ -51,7 +51,6 @@ module.exports = {
     'unicorn/no-useless-length-check': 'error',
     'unicorn/no-useless-promise-resolve-reject': 'error',
     'unicorn/no-useless-spread': 'error',
-    'unicorn/no-useless-undefined': 'error',
     'unicorn/no-zero-fractions': 'error',
     'unicorn/numeric-separators-style': 'error',
     'unicorn/prefer-add-event-listener': 'error',
