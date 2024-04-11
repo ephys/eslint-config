@@ -1,6 +1,6 @@
 {
   "name": "@ephys/eslint-config",
-  "version": "20.1.2",
+  "version": "20.1.3",
   "description": "ESLint configuration for the foobarHQ JavaScript code style",
   "main": "lib/index.js",
   "scripts": {
