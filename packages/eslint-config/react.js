@@ -67,7 +67,6 @@ module.exports = {
       when: 'never',
     }],
     'react/jsx-curly-brace-presence': [2, 'never'],
-    'react/jsx-curly-newline': [2, 'never'],
     'react/jsx-child-element-spacing': 1,
     'react/jsx-key': [2, { checkFragmentShorthand: true }],
     'react/void-dom-elements-no-children': 2,
