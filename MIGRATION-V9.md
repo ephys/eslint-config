@@ -127,7 +127,7 @@ module.exports = {
 
 ```javascript
 // eslint.config.js
-import { basePreset } from '@ephys/eslint-config/lib/base-preset';
+import { basePreset } from '@ephys/eslint-config';
 
 export default [
   ...basePreset,
