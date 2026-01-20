@@ -1,56 +1,79 @@
-module.exports = {
-  plugins: ['import', 'small-import'],
-  rules: {
-    'import/export': 'error',
-    'import/first': 'error',
-    'import/newline-after-import': 'error',
+import { noFullImportPlugin } from '@ephys/eslint-plugin-no-full-import';
+import importPlugin from 'eslint-plugin-import';
 
-    'import/no-absolute-path': 'error',
-    'import/no-amd': 'error',
+export const modulesConfig = [
+  {
+    plugins: {
+      import: importPlugin,
+      '@ephys/no-full-import': noFullImportPlugin,
+    },
+    rules: {
+      'import/export': 'error',
+      'import/first': 'error',
+      'import/newline-after-import': 'error',
 
-    'import/no-commonjs': 'error',
+      'import/no-absolute-path': 'error',
+      'import/no-amd': 'error',
 
-    'import/no-default-export': 'error',
-    'import/no-duplicates': 'error',
+      'import/no-commonjs': 'error',
 
-    'import/no-extraneous-dependencies': ['error', {
-      peerDependencies: true,
-    }],
+      'import/no-default-export': 'error',
+      'import/no-duplicates': 'error',
 
-    'import/no-useless-path-segments': ['error', {
-      // we support native ESM which requires specifying the actual path (or using package.json)
-      noUselessIndex: false,
-    }],
-    'no-import-assign': 'error',
+      'import/no-extraneous-dependencies': [
+        'error',
+        {
+          peerDependencies: true,
+        },
+      ],
 
-    'small-import/no-full-import': ['error', {
-      packages: {
-        '@material-ui/core': '/',
-        '@material-ui/icons': '/',
-        '@mui/icons-material': '/',
-        '@mui/material': '/',
-        '@mui/styles': '/',
-        '@mui/x-date-pickers': '/',
-        'date-fns': '/',
-        lodash: '/',
-        rambda: '/src/',
-      },
-    }],
-  },
-  settings: {
-    'import/resolver': {
-      node: {
-        extensions: [
-          '.js',
-          '.jsx',
-          '.mjs',
-          '.ts',
-          '.tsx',
-          '.mts',
-          '.cts',
-          '.d.ts',
-        ],
+      'import/no-useless-path-segments': [
+        'error',
+        {
+          // we support native ESM which requires specifying the actual path (or using package.json)
+          noUselessIndex: false,
+        },
+      ],
+      'no-import-assign': 'error',
+
+      '@ephys/no-full-import/no-full-import': [
+        'error',
+        {
+          packages: {
+            '@material-ui/core': '/',
+            '@material-ui/icons': '/',
+            '@mui/icons-material': '/',
+            '@mui/material': '/',
+            '@mui/styles': '/',
+            '@mui/x-date-pickers': '/',
+            'date-fns': '/',
+            lodash: '/',
+            rambda: '/src/',
+          },
+        },
+      ],
+    },
+    settings: {
+      'import/resolver': {
+        node: {
+          extensions: [
+            '.js',
+            '.jsx',
+            '.mjs',
+            '.ts',
+            '.tsx',
+            '.mts',
+            '.cts',
+            '.d.ts',
+          ],
+        },
       },
     },
   },
-};
+  {
+    files: ['eslint.config.js'],
+    rules: {
+      'import/no-default-export': 'off',
+    },
+  },
+];

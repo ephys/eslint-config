@@ -1,17 +1,28 @@
 {
   "private": true,
   "version": "0.0.0-semantically-released",
+  "type": "module",
   "scripts": {
+    "build": "npm run build --workspaces --if-present",
     "fix-npm": "lerna exec -- rm -rf node_modules && rm -f package-lock.json && lerna bootstrap",
-    "publish-ci": "npx multi-semantic-release"
+    "format": "npm run format:eslint && npm run format:prettier",
+    "format:eslint": "npm run format:eslint --workspaces",
+    "format:prettier": "prettier --write .",
+    "publish-ci": "npx multi-semantic-release",
+    "test": "npm run test:eslint && npm run test:prettier && npm run test:unit",
+    "test:eslint": "npm run test:eslint --workspaces",
+    "test:prettier": "prettier --check .",
+    "test:unit": "npm run test:unit --workspaces --if-present"
   },
   "devDependencies": {
-    "@rushstack/eslint-patch": "^1.2.0",
     "@semantic-release/changelog": "^6.0.3",
-    "eslint": "^8.38.0",
-    "lerna": "^6.6.1",
-    "multi-semantic-release": "^3.0.2",
-    "semantic-release": "^21.0.1"
+    "eslint": "^9.39.2",
+    "lerna": "^9.0.3",
+    "multi-semantic-release": "^3.1.0",
+    "prettier": "^3.4.2",
+    "prettier-plugin-organize-imports": "^4.1.0",
+    "semantic-release": "^25.0.2",
+    "typescript": "^5.9.3"
   },
   "name": "eslint-config",
   "workspaces": [

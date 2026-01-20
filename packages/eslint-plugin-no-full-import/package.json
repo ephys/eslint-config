@@ -1,0 +1,50 @@
+{
+  "name": "@ephys/eslint-plugin-no-full-import",
+  "version": "1.0.0",
+  "description": "ESLint rule to prevent importing entire packages when a smaller per-member import is preferred",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist/**",
+    "README.md"
+  ],
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "tsc -p tsconfig.json",
+    "test:unit": "node --test dist/__tests__/no-full-import.test.js",
+    "test:eslint": "eslint .",
+    "format:eslint": "eslint . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ephys/eslint-config.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslintplugin"
+  ],
+  "author": "Zoé Cox <zoe@ephys.dev>",
+  "license": "MIT",
+  "homepage": "https://github.com/ephys/eslint-config",
+  "peerDependencies": {
+    "eslint": "^9.39.2"
+  },
+  "dependencies": {
+    "@sequelize/utils": "^7.0.0-alpha.47",
+    "@typescript-eslint/utils": "^8.53.1"
+  },
+  "devDependencies": {
+    "@ephys/eslint-config-typescript": "*",
+    "@types/node": "^24.1.0",
+    "@typescript-eslint/parser": "^8.53.1",
+    "@typescript-eslint/rule-tester": "^8.53.1",
+    "typescript": "^5.9.3"
+  }
+}

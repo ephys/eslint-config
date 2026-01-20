@@ -2,9 +2,18 @@
   "name": "@ephys/eslint-config",
   "version": "20.1.4",
   "description": "ESLint configuration for the foobarHQ JavaScript code style",
-  "main": "lib/index.js",
+  "type": "module",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "default": "./lib/index.js"
+    }
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:eslint": "eslint .",
+    "format:eslint": "eslint . --fix"
   },
   "repository": {
     "type": "git",
@@ -17,19 +26,18 @@
   "license": "MIT",
   "homepage": "https://github.com/ephys/eslint-config",
   "dependencies": {
-    "@babel/core": "^7.21.4",
-    "@babel/eslint-parser": "^7.21.3",
-    "eslint": "^8.38.0",
+    "@ephys/eslint-plugin-no-full-import": "*",
+    "eslint": "^9.39.2",
     "eslint-plugin-eslint-comments": "^3.2.0",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-jest": "^27.2.1",
-    "eslint-plugin-json": "^3.1.0",
-    "eslint-plugin-jsx-a11y": "^6.7.1",
-    "eslint-plugin-lodash": "^7.4.0",
-    "eslint-plugin-react": "^7.32.2",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-small-import": "^1.0.0",
-    "eslint-plugin-sort-destructure-keys": "^1.5.0",
-    "eslint-plugin-unicorn": "^46.0.0"
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-jest": "^29.12.1",
+    "eslint-plugin-json": "^4.0.1",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-lodash": "^8.0.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-sort-destructure-keys": "^2.0.0",
+    "eslint-plugin-unicorn": "^62.0.0",
+    "globals": "^17.0.0"
   }
 }

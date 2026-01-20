@@ -2,9 +2,24 @@
   "name": "@ephys/eslint-config-typescript",
   "version": "20.1.4",
   "description": "ESLint configuration for the foobarHQ JavaScript code style with Typescript support",
-  "main": "lib/index.js",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist/**",
+    "CHANGELOG.md"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rm -rf dist",
+    "build": "tsc -p tsconfig.json",
+    "test:eslint": "eslint .",
+    "format:eslint": "eslint . --fix"
   },
   "repository": {
     "type": "git",
@@ -15,8 +30,8 @@
   "homepage": "https://github.com/ephys/eslint-config",
   "dependencies": {
     "@ephys/eslint-config": "^20.1.4",
-    "@typescript-eslint/eslint-plugin": "^7.2.0",
-    "@typescript-eslint/parser": "^7.2.0",
-    "eslint-import-resolver-typescript": "^3.6.1"
+    "eslint": "^9.39.2",
+    "eslint-import-resolver-typescript": "^4.4.4",
+    "typescript-eslint": "^8.53.1"
   }
 }

@@ -1,12 +1,14 @@
-'use strict';
+import jsonPlugin from 'eslint-plugin-json';
 
-module.exports = {
-  overrides: [{
-    plugins: ['json'],
-    extends: ['plugin:json/recommended'],
-    files: ['*.json', '.babelrc', '.eslintrc'],
+export const jsonConfigs = [
+  {
+    files: ['**/*.json', '**/.babelrc', '**/.eslintrc'],
+    plugins: {
+      json: jsonPlugin,
+    },
+    ...jsonPlugin.configs.recommended,
     rules: {
       'quote-props': ['error', 'always'],
     },
-  }],
-};
+  },
+];
