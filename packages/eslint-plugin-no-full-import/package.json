@@ -1,6 +1,6 @@
 {
   "name": "@ephys/eslint-plugin-no-full-import",
-  "version": "1.0.0",
+  "version": "21.0.0",
   "description": "ESLint rule to prevent importing entire packages when a smaller per-member import is preferred",
   "type": "module",
   "main": "dist/index.js",
