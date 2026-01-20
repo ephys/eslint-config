@@ -1,6 +1,6 @@
 {
   "name": "@ephys/eslint-config",
-  "version": "21.0.0",
+  "version": "21.0.1",
   "description": "ESLint configuration for the foobarHQ JavaScript code style",
   "type": "module",
   "main": "./lib/index.js",
@@ -26,7 +26,7 @@
   "license": "MIT",
   "homepage": "https://github.com/ephys/eslint-config",
   "dependencies": {
-    "@ephys/eslint-plugin-no-full-import": "*",
+    "@ephys/eslint-plugin-no-full-import": "^21.0.0",
     "eslint": "^9.39.2",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-import": "^2.32.0",
