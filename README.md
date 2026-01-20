@@ -8,7 +8,7 @@ This preset is designed to be used with Prettier and `prettier-plugin-organize-i
 
 ## ESLint 9 Migration
 
-**This package now supports ESLint 9's flat config format!** 
+**This package now supports ESLint 9's flat config format!**
 
 If you're upgrading from ESLint 8, please see [MIGRATION-V9.md](MIGRATION-V9.md) for detailed migration instructions.
 
@@ -18,22 +18,24 @@ If you're upgrading from ESLint 8, please see [MIGRATION-V9.md](MIGRATION-V9.md)
 - Create an `eslint.config.js` file:
 
   **For Vanilla JavaScript:**
+
   ```javascript
-  import { basePreset } from '@ephys/eslint-config/lib/base-preset';
-  
+  import { basePreset } from '@ephys/eslint-config';
+
   export default basePreset;
   ```
 
   **For TypeScript:**
+
   ```javascript
   import { basePreset } from '@ephys/eslint-config-typescript';
-  
-  export default basePreset;
+
+  export default basePreset(import.meta.dirname + '/tsconfig.json');
   ```
 
 ## Presets
 
-We have more than one preset available for our different environments. 
+We have more than one preset available for our different environments.
 You can enable these variants by importing the named exports from our configuration presets.
 
 The following preset exports are available:
@@ -49,12 +51,17 @@ Note: All of these presets are also available from `@ephys/eslint-config-typescr
 ### Example: TypeScript + React + Browser
 
 ```javascript
-import { basePreset, browserAddon, reactAddon, jestAddon } from '@ephys/eslint-config-typescript';
-
-export default [
-  ...basePreset,
+import {
+  basePreset,
   browserAddon,
   reactAddon,
   jestAddon,
+} from '@ephys/eslint-config-typescript';
+
+export default [
+  ...basePreset(import.meta.dirname + '/tsconfig.json'),
+  ...browserAddon,
+  ...reactAddon,
+  ...jestAddon,
 ];
 ```

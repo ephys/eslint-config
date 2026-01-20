@@ -12,7 +12,8 @@
     }
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:eslint": "eslint .",
+    "format:eslint": "eslint . --fix"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,7 @@
   "license": "MIT",
   "homepage": "https://github.com/ephys/eslint-config",
   "dependencies": {
+    "@ephys/eslint-plugin-no-full-import": "*",
     "eslint": "^9.39.2",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-import": "^2.32.0",
@@ -34,7 +36,6 @@
     "eslint-plugin-lodash": "^8.0.0",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^7.0.1",
-    "eslint-plugin-small-import": "^1.0.0",
     "eslint-plugin-sort-destructure-keys": "^2.0.0",
     "eslint-plugin-unicorn": "^62.0.0",
     "globals": "^17.0.0"

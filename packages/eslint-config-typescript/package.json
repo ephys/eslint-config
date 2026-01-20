@@ -17,7 +17,9 @@
   ],
   "scripts": {
     "clean": "rm -rf dist",
-    "build": "tsc -p tsconfig.json"
+    "build": "tsc -p tsconfig.json",
+    "test:eslint": "eslint .",
+    "format:eslint": "eslint . --fix"
   },
   "repository": {
     "type": "git",
@@ -27,8 +29,8 @@
   "license": "MIT",
   "homepage": "https://github.com/ephys/eslint-config",
   "dependencies": {
-    "eslint": "^9.39.2",
     "@ephys/eslint-config": "^20.1.4",
+    "eslint": "^9.39.2",
     "eslint-import-resolver-typescript": "^4.4.4",
     "typescript-eslint": "^8.53.1"
   }

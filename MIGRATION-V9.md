@@ -16,6 +16,7 @@ ESLint 9 uses a new flat config format. You need to:
 The configs now use **named exports** instead of default exports.
 
 **Old (ESLint 8):**
+
 ```javascript
 // .eslintrc.js
 module.exports = {
@@ -27,7 +28,7 @@ module.exports = {
 
 ```javascript
 // eslint.config.js
-import { basePreset } from '@ephys/eslint-config/lib/base-preset';
+import { basePreset } from '@ephys/eslint-config';
 
 export default basePreset;
 ```
@@ -35,6 +36,7 @@ export default basePreset;
 ### 3. Using TypeScript Config
 
 **Old (ESLint 8):**
+
 ```javascript
 // .eslintrc.js
 module.exports = {
@@ -43,16 +45,18 @@ module.exports = {
 ```
 
 **New (ESLint 9):**
+
 ```javascript
 // eslint.config.js
 import { basePreset } from '@ephys/eslint-config-typescript';
 
-export default basePreset;
+export default basePreset(import.meta.dirname + '/tsconfig.json');
 ```
 
 ### 4. Using Additional Configs (Browser, Node, React, Jest)
 
 **Old (ESLint 8):**
+
 ```javascript
 // .eslintrc.js
 module.exports = {
@@ -68,20 +72,15 @@ module.exports = {
 
 ```javascript
 // eslint.config.js
-import { basePreset } from '@ephys/eslint-config/lib/base-preset';
-import { browserAddon } from '@ephys/eslint-config/lib/browser-addon';
-import { reactAddon } from '@ephys/eslint-config/lib/react-addon';
+import { basePreset, browserAddon, reactAddon } from '@ephys/eslint-config';
 
-export default [
-  ...basePreset,
-  browserAddon,
-  reactAddon,
-];
+export default [...basePreset, ...browserAddon, ...reactAddon];
 ```
 
 ### 5. TypeScript with React and Browser
 
 **Old (ESLint 8):**
+
 ```javascript
 // .eslintrc.js
 module.exports = {
@@ -97,20 +96,23 @@ module.exports = {
 
 ```javascript
 // eslint.config.js
-import { config } from '@ephys/eslint-config-typescript';
-import { browserAddon } from '@ephys/eslint-config-typescript/browser';
-import { reactAddon } from '@ephys/eslint-config-typescript/react';
-
-export default [
-  ...config,
+import {
+  basePreset,
   browserAddon,
   reactAddon,
+} from '@ephys/eslint-config-typescript';
+
+export default [
+  ...basePreset(import.meta.dirname + '/tsconfig.json'),
+  ...browserAddon,
+  ...reactAddon,
 ];
 ```
 
 ### 6. Adding Custom Rules
 
 **Old (ESLint 8):**
+
 ```javascript
 // .eslintrc.js
 module.exports = {

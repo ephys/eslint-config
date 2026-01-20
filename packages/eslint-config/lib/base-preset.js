@@ -1,11 +1,11 @@
+import lodash from 'eslint-plugin-lodash';
 import globals from 'globals';
-import { modulesConfig } from './modules.js';
-import { vanillaConfig } from './vanilla.js';
-import { switchCaseConfig } from './switch-case.js';
-import { regexConfig } from './regex.js';
-import { lodashConfig } from './lodash.js';
 import { jsonConfigs } from './json.js';
+import { modulesConfig } from './modules.js';
+import { regexConfig } from './regex.js';
+import { switchCaseConfig } from './switch-case.js';
 import { unicornConfig } from './unicorn.js';
+import { vanillaConfig } from './vanilla.js';
 
 export const basePreset = [
   {
@@ -28,11 +28,10 @@ export const basePreset = [
       reportUnusedDisableDirectives: 'error',
     },
   },
-  modulesConfig,
-  vanillaConfig,
+  ...modulesConfig,
+  ...vanillaConfig,
   switchCaseConfig,
   regexConfig,
-  lodashConfig,
   {
     rules: {
       'no-alert': 2,
@@ -40,9 +39,16 @@ export const basePreset = [
     },
   },
   ...jsonConfigs,
-  unicornConfig,
+  ...unicornConfig,
   {
+    plugins: {
+      lodash,
+    },
     rules: {
+      // these two are handled by no-invalid-this + this is too slow
+      // 'lodash/callback-binding': 2,
+      // 'lodash/no-unbound-this': 2,
+      'lodash/import-scope': [2, 'method'],
       'unicorn/prefer-top-level-await': 'error',
       'unicorn/prefer-module': 'error',
       'import/no-commonjs': 'error',
