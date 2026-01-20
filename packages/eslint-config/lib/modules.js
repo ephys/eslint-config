@@ -1,5 +1,11 @@
-module.exports = {
-  plugins: ['import', 'small-import'],
+import importPlugin from 'eslint-plugin-import';
+import smallImport from 'eslint-plugin-small-import';
+
+export const modulesConfig = {
+  plugins: {
+    import: importPlugin,
+    'small-import': smallImport,
+  },
   rules: {
     'import/export': 'error',
     'import/first': 'error',

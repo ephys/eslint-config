@@ -1,4 +1,4 @@
-module.exports = {
+export const switchCaseConfig = {
   rules: {
     'no-case-declarations': 2,
     'no-duplicate-case': 2,

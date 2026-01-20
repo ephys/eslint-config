@@ -1,4 +1,4 @@
-module.exports = {
+export const regexConfig = {
   rules: {
     'no-control-regex': 2,
     'no-empty-character-class': 2,

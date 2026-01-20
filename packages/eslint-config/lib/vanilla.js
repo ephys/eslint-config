@@ -1,5 +1,9 @@
-module.exports = {
-  plugins: ['eslint-plugin-sort-destructure-keys'],
+import sortDestructureKeys from 'eslint-plugin-sort-destructure-keys';
+
+export const vanillaConfig = {
+  plugins: {
+    'sort-destructure-keys': sortDestructureKeys,
+  },
   rules: {
     'array-callback-return': ['error', { allowImplicit: true }],
     'arrow-body-style': [0, 'as-needed', { requireReturnForObjectLiteral: false }],
@@ -451,8 +455,10 @@ Note that "new Date()" without arguments is still allowed to get the current Dat
     yoda: ['error', 'never', { exceptRange: true }],
   },
 
-  globals: {
-    globalThis: true,
+  languageOptions: {
+    globals: {
+      globalThis: true,
+    },
   },
 
   // these rules only run on vanilla or flow files

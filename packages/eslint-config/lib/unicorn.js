@@ -1,5 +1,9 @@
-module.exports = {
-  plugins: ['unicorn'],
+import unicorn from 'eslint-plugin-unicorn';
+
+export const unicornConfig = {
+  plugins: {
+    unicorn,
+  },
   rules: {
     // Very slow
     // 'unicorn/better-regex': 'error',

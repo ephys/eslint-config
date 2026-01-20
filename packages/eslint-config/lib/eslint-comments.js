@@ -1,5 +1,9 @@
-module.exports = {
-  plugins: ['eslint-comments'],
+import eslintComments from 'eslint-plugin-eslint-comments';
+
+export const eslintCommentsConfig = {
+  plugins: {
+    'eslint-comments': eslintComments,
+  },
   rules: {
     'eslint-comments/disable-enable-pair': 'error',
     'eslint-comments/no-aggregating-enable': 'error',

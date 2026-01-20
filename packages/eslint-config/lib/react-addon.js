@@ -1,5 +1,13 @@
-module.exports = {
-  plugins: ['react', 'jsx-a11y', 'react-hooks'],
+import reactPlugin from 'eslint-plugin-react';
+import jsxA11y from 'eslint-plugin-jsx-a11y';
+import reactHooks from 'eslint-plugin-react-hooks';
+
+export const reactAddon = {
+  plugins: {
+    react: reactPlugin,
+    'jsx-a11y': jsxA11y,
+    'react-hooks': reactHooks,
+  },
   rules: {
     'jsx-quotes': [2, 'prefer-double'],
     'react/require-default-props': 0,
