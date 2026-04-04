@@ -1,24 +1,18 @@
 import parser from '@typescript-eslint/parser';
 import { RuleTester } from '@typescript-eslint/rule-tester';
 import assert from 'node:assert/strict';
-import { describe, it } from 'node:test';
+import { after, describe, it } from 'node:test';
 import { noFullImport } from '../no-full-import.js';
+
+RuleTester.afterAll = after;
+RuleTester.describe = describe;
+RuleTester.it = it;
 
 describe('no-full-import', () => {
   it('throws when no packages are configured', () => {
-    const tester = new RuleTester({
-      languageOptions: {
-        parser,
-        ecmaVersion: 2022,
-        sourceType: 'module',
-      },
-    });
-
-    assert.throws(() => {
-      tester.run('no-full-import', noFullImport, {
-        valid: [],
-        invalid: [],
-      });
+    assert.throws(() => noFullImport.create({ options: [] } as any), {
+      message:
+        'no-full-import rule requires at least one package to be specified',
     });
   });
 

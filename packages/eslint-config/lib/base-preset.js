@@ -1,5 +1,6 @@
 import lodash from 'eslint-plugin-lodash';
 import globals from 'globals';
+import { eslintCommentsConfig } from './eslint-comments.js';
 import { jsonConfigs } from './json.js';
 import { modulesConfig } from './modules.js';
 import { regexConfig } from './regex.js';
@@ -30,6 +31,7 @@ export const basePreset = [
   },
   ...modulesConfig,
   ...vanillaConfig,
+  eslintCommentsConfig,
   switchCaseConfig,
   regexConfig,
   {
