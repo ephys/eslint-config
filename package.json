@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "npm run build --workspaces --if-present",
+    "check-updates": "ncu -i --deep",
     "fix-npm": "lerna exec -- rm -rf node_modules && rm -f package-lock.json && lerna bootstrap",
     "format": "npm run format:eslint && npm run format:prettier",
     "format:eslint": "npm run format:eslint --workspaces",
@@ -16,13 +17,14 @@
   },
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.3",
-    "eslint": "^9.39.2",
-    "lerna": "^9.0.3",
+    "eslint": "^9.39.4",
+    "lerna": "^9.0.7",
     "multi-semantic-release": "^3.1.0",
-    "prettier": "^3.4.2",
-    "prettier-plugin-organize-imports": "^4.1.0",
-    "semantic-release": "^25.0.2",
-    "typescript": "^5.9.3"
+    "npm-check-updates": "^20.0.0",
+    "prettier": "^3.8.1",
+    "prettier-plugin-organize-imports": "^4.3.0",
+    "semantic-release": "^25.0.3",
+    "typescript": "^6.0.2"
   },
   "name": "eslint-config",
   "workspaces": [

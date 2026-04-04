@@ -1,6 +1,5 @@
 import parser from '@typescript-eslint/parser';
 import { RuleTester } from '@typescript-eslint/rule-tester';
-// eslint-disable-next-line no-restricted-imports
 import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
 import { noFullImport } from '../no-full-import.js';

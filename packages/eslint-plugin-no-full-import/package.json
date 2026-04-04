@@ -18,9 +18,13 @@
   "scripts": {
     "clean": "rm -rf dist",
     "build": "tsc -p tsconfig.json",
+    "test": "npm run test:eslint && npm run test:prettier && npm run test:unit",
     "test:unit": "node --test dist/__tests__/no-full-import.test.js",
     "test:eslint": "eslint .",
-    "format:eslint": "eslint . --fix"
+    "test:prettier": "prettier --check .",
+    "format": "npm run format:eslint && npm run format:prettier",
+    "format:eslint": "eslint . --fix",
+    "format:prettier": "prettier --write ."
   },
   "repository": {
     "type": "git",
@@ -34,17 +38,17 @@
   "license": "MIT",
   "homepage": "https://github.com/ephys/eslint-config",
   "peerDependencies": {
-    "eslint": "^9.39.2"
+    "eslint": "^9.39.4"
   },
   "dependencies": {
-    "@sequelize/utils": "^7.0.0-alpha.47",
-    "@typescript-eslint/utils": "^8.53.1"
+    "@sequelize/utils": "^7.0.0-alpha.48",
+    "@typescript-eslint/utils": "^8.58.0"
   },
   "devDependencies": {
-    "@ephys/eslint-config-typescript": "^21.0.0",
-    "@types/node": "^24.1.0",
-    "@typescript-eslint/parser": "^8.53.1",
-    "@typescript-eslint/rule-tester": "^8.53.1",
-    "typescript": "^5.9.3"
+    "@ephys/eslint-config-typescript": "^21.0.1",
+    "@types/node": "^25.5.2",
+    "@typescript-eslint/parser": "^8.58.0",
+    "@typescript-eslint/rule-tester": "^8.58.0",
+    "typescript": "^6.0.2"
   }
 }

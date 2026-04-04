@@ -252,11 +252,6 @@ export const vanillaConfig = [
               group: ['lodash/pick', 'lodash/pick.js'],
               message: 'Use pick from the @sequelize/utils package instead.',
             },
-            {
-              group: ['node:assert', 'node:assert/*'],
-              message:
-                'Please use assert from @sequelize/utils, as it works in all envs',
-            },
           ],
         },
       ],
